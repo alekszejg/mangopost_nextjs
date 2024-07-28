@@ -1,0 +1,23 @@
+{
+    "about": {
+        "header": {
+            "en": "ABOUT MANGOPOST",
+            "de": "ÜBER MANGOPOST"
+        },
+        "text": {
+            "en": "The usual process of ordering food for a large team involves selecting someone to place the order, deciding where to order from, running around the offices asking colleagues what they want, and then collecting money from everyone.<br/><br/>Leave that in the past. With Mangopost, you receive food delivery from the best places in the city. You can order food spontaneously or schedule a food delivery plan with us to have food arrive regularly at your workplace. Every team member can make their order on their smartphone up to two hours before the delivery, pay for their part of the order, and expect the food to arrive all at once at the specified time.",
+            "de": "Der übliche Prozess, Essen für ein großes Team zu bestellen, umfasst das Auswählen einer Person, die die Bestellung aufgibt, die Entscheidung, wo bestellt wird, das Herumlaufen in den Büros, um die Kollegen zu fragen, was sie bestellen möchten, und das Einsammeln des Geldes von allen.<br/><br/>Vergessen Sie diesen Aufwand. Mit Mangopost erhalten Sie Essenslieferungen von den besten Restaurants der Stadt. Sie können spontan Essen bestellen oder einen Lieferplan mit uns vereinbaren, damit das Essen regelmäßig an Ihren Arbeitsplatz geliefert wird. Jedes Teammitglied kann seine Bestellung bis zu zwei Stunden vor der Lieferung über sein Smartphone aufgeben, für seinen Teil der Bestellung bezahlen und das Essen zur angegebenen Zeit erwarten."
+        }
+    },
+
+    "contact": {
+        "header": {
+            "en": "FEEL FREE TO CONTACT US",
+            "de": "KONTAKTIEREN SIE UNS GERNE"
+        },
+        "text": {
+            "en": "Send us an email at mangopost@mail.com",
+            "de": "Senden Sie uns eine E-Mail an mangopost@mail.com"
+        }
+    }
+}

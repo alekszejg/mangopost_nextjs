@@ -1,0 +1,206 @@
+{
+    "shared": {
+        "stages": {
+                "join": {
+                    "header": {
+                        "en": "JOIN",
+                        "de": "MITGLIED WERDEN"
+                    },
+                    "text": {
+                        "en": "Create an account to join Mangopost and receive scheduled deliveries.",
+                        "de": "Erstellen Sie ein Konto, um Mangopost beizutreten und regelmäßig geplante Lieferungen zu erhalten."
+                    }
+                },
+                "browse": {
+                    "header": {
+                        "en": "BROWSE",
+                        "de": "WÄHLEN"
+                    },
+                    "text": {
+                        "en": "Choose the food you want to order.",
+                        "de": "Wählen Sie das Essen, das Sie bestellen möchten."
+                    }
+                }, 
+                "order": {
+                    "header": {
+                        "en": "ORDER",
+                        "de": "BESTELLEN"
+                    },
+                    "text": {
+                        "en": "Place an order for 2+ employees or add your team members to choose their meals.",
+                        "de": "Geben Sie eine Bestellung für 2+ Mitarbeiter auf oder fügen Sie Ihre Teammitglieder hinzu, um ihre Mahlzeiten auszuwählen."
+                    }
+                },
+                "enjoy": {
+                    "header": {
+                        "en": "ENJOY",
+                        "de": "GENIEßEN"
+                    },
+                    "text": {
+                        "en": "Enjoy the food that we have delivered to you!",
+                        "de": "Genießen Sie das Essen, das wir Ihnen geliefert haben!"
+                    }
+                }
+            },
+
+
+        "comparison": {
+           "onDemand": {
+                "header": {
+                    "en": "ON-DEMAND DELIVERY",
+                    "de": "AUF ANRUF LIEFERUNG"
+                },
+                "text": {
+                    "en": "For business meetings & events",
+                    "de": "Für Geschäftstreffen & Veranstaltungen"
+                },
+                "features": {
+                    "en": [
+                        "Order when you need", 
+                        "Individual & group meals", 
+                        "Orders for large teams", 
+                        "Order ASAP or schedule it"
+                    ],
+                    "de": [
+                        "Bestellen Sie, wenn Sie es brauchen", 
+                        "Einzel- und Gruppenmahlzeiten", 
+                        "Bestellungen für große Teams", 
+                        "Bestellen Sie so schnell wie möglich oder planen Sie es ein"
+                    ]
+                }
+           },
+           "scheduled": {
+                "header": {
+                    "en": "SCHEDULED DELIVERY",
+                    "de": "GEPLANTE LIEFERUNG"
+                },
+                "text": {
+                    "en":"For scheduled daily or weekly meals",
+                    "de": "Für geplante tägliche oder wöchentliche Mahlzeiten"
+                },
+                "features": {
+                    "en": [
+                        "Schedule recurring meals", 
+                        "Individual & group meals", 
+                        "Choose and customize your meals", 
+                        "Add or cancel your order from group order"
+                    ],
+                    "de": [
+                        "Wiederkehrende Mahlzeiten einplanen", 
+                        "Einzel- und Gruppenmahlzeiten", 
+                        "Wählen und passen Sie Ihre Mahlzeiten an", 
+                        "Bestellung zur Gruppenbestellung hinzufügen oder stornieren"
+                    ]
+                }
+            }
+        },
+
+
+        "features": {
+            "favouriteFood": {
+                "header": {
+                    "en": "YOUR FAVOURITE FOOD",
+                    "de": "IHR LIEBLINGSESSEN" 
+                },
+                "text": {
+                    "en": "We work with your local restaurants to deliver reliable and tasty meals right to your workplace, scheduled on time you choose. Regardless of cuisine, you will always find something for yourself!",
+                    "de": "Wir arbeiten mit Ihren lokalen Restaurants zusammen, um zuverlässige und leckere Mahlzeiten direkt an Ihren Arbeitsplatz zu liefern, zu einer von Ihnen gewählten Zeit. Unabhängig von der Küche werden Sie immer etwas für sich finden!"
+                }
+            },
+            "drivers": {
+                "header": {
+                    "en": "EFFICIENT DELIVERY",
+                    "de": "EFFIZIENTE LIEFERUNG"
+                },
+                "text": {
+                    "en": "We have got professional drivers who are prepared to deliver large orders safely and efficiently. Your food will be hot on arrival.",
+                    "de": "Wir haben professionelle Fahrer, die darauf vorbereitet sind, große Bestellungen sicher und effizient zu liefern. Ihr Essen wird bei der Ankunft heiß sein."
+                }
+            },
+            "customerSupport": {
+                "header": {
+                    "en": "HELPFUL CUSTOMER SERVICE",
+                    "de": "HILFSBEREITER KUNDENSERVICE"
+                },
+                "text": {
+                    "en": "When you need any help with your order, we are here for you! Our customer service team will be available live to you and answer all your questions.",
+                    "de": "Wenn Sie Hilfe mit Ihrer Bestellung benötigen, sind wir für Sie da! Unser Kundenservice-Team steht Ihnen live zur Verfügung und beantwortet all Ihre Fragen."
+                }
+            }      
+        } 
+    },
+
+
+    "onDemand": {
+        "headers": {
+            "howItWorks": {
+                "en": "HOW DOES MANGOPOST ON-DEMAND DELIVERY WORK?",
+                "de": "WIE FUNKTIONIERT DIE MANGOPOST AUF ANRUF LIEFERUNG?"
+            },
+            "comparison": {
+                "en": "COMPARING MANGOPOST ON-DEMAND DELIVERY WITH SCHEDULED DELIVERY",
+                "de": "VERGLEICH VON MANGOPOST AUF ANRUF LIEFERUNG MIT GEPLANTE LIEFERUNG"
+            },
+            "features": {
+                "en": "WHY CHOOSE MANGOPOST ON-DEMAND?",
+                "de": "WARUM MANGOPOST AUF ANRUF WÄHLEN?"
+            }
+        },
+        "text": {
+            "features": {
+                "en": "Ordering meals can get difficult, especially for a large team of hungry people. Mangopost will take care of such problem by providing you with local restaurants to order from, professional and efficient drivers to deliver your orders, as well as offer helpful customer support with your orders.",
+                "de": "Das Bestellen von Mahlzeiten kann schwierig werden, insbesondere für ein großes Team hungriger Menschen. Mangopost wird dieses Problem lösen, indem es Ihnen lokale Restaurants zur Auswahl stellt, professionelle und effiziente Fahrer, die Ihre Bestellungen liefern, sowie einen hilfreichen Kundensupport für Ihre Bestellungen bietet."
+            }
+        },
+        "buttons": {
+            "orderNow": {
+                "en": "ORDER NOW",
+                "de": "JETZT BESTELLEN"
+            },
+            "learnMore": {
+                "en": "LEARN MORE",
+                "de": "MEHR ERFAHREN"
+            }
+        }
+    },
+
+
+    "scheduled": {
+        "headers": {
+            "howItWorks": {
+                "en": "HOW DOES MANGOPOST SCHEDULED DELIVERY WORK?",
+                "de": "WIE FUNKTIONIERT DIE GEPLANTE LIEFERUNG VON MANGOPOST?"
+            },
+            "comparison": {
+                "en": "COMPARING MANGOPOST SCHEDULED DELIVERY WITH ON-DEMAND DELIVERY",
+                "de": "VERGLEICH VON MANGOPOST GEPLANTE LIEFERUNG MIT AUF ANRUF LIEFERUNG"
+            },
+            "features": {
+                "en": "WHY CHOOSE MANGOPOST SCHEDULED DELIVERY?",
+                "de": "WARUM MANGOPOST GEPLANTE LIEFERUNG WÄHLEN?"
+            }
+        },
+        "text": {
+            "features": {
+                "en": "Having your meal choices and delivery time planned beforehand saves lots of time and stress for you and your colleagues when it comes decided he food and the place from which you want to order, as well as try and find time to take a break and enjoy the food. Mangopost Scheduled Delivery is here to solve all these issues.",
+                "de": "Wenn Sie Ihre Essensauswahl und die Lieferzeit im Voraus planen, sparen Sie und Ihre Kollegen viel Zeit und Stress bei der Entscheidung über das Essen und den Ort, von dem Sie bestellen möchten. Außerdem finden Sie so leichter Zeit, eine Pause zu machen und das Essen zu genießen. Mangopost Geplante Lieferung ist da, um all diese Probleme zu lösen."
+            }
+        },
+        "buttons": {
+            "signup": {
+                "en": "SIGN UP",
+                "de": "REGISTRIEREN"
+            },
+            "login": {
+                "en": "SIGN IN",
+                "de": "ANMELDEN"
+            }
+        }
+    }
+}
+            
+            
+            
+        
+        
+        

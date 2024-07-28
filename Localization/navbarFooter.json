@@ -1,0 +1,96 @@
+{
+    "navbar": {
+        "titles": {
+            "aboutUs": {
+                "en": "ABOUT US",
+                "de": "ÜBER UNS"
+            },
+            "orderNow": {
+                "en": "ORDER NOW",
+                "de": "JETZT BESTELLEN"
+            },
+            "dropdown": {
+                "onDemand": {
+                    "en": "ON-DEMAND DELIVERY",
+                    "de": "AUF ANRUF LIEFERUNG"
+                },
+                "scheduled": {
+                    "en": "SCHEDULED DELIVERY",
+                    "de": "GEPLANTE LIEFERUNG"
+                }
+            }
+        }
+    },
+
+
+    "footer": {
+        "urlBlocks": {
+            "orderWays": {
+                "header": {
+                    "en": "WAYS TO ORDER",
+                    "de": "BESTELLMÖGLICHKEITEN"
+                },
+                "urls": [
+                    {
+                        "name": {
+                            "en": "On-Demand Delivery",
+                            "de": "Auf Anruf Lieferung"
+                        },
+                        "route": {
+                            "en": "/on-demand-delivery",
+                            "de": "/auf-anruf-lieferung"
+                        }
+                    },
+                    {
+                        "name": {
+                            "en": "Scheduled Delivery",
+                            "de": "Geplante Lieferung"
+                        },
+                        "route": {
+                            "en": "/scheduled-delivery",
+                            "de": "/geplante-lieferung"
+                        }
+                    }   
+                ]
+            },
+            "company": {
+                "header": {
+                    "en": "ABOUT COMPANY",
+                    "de": "ÜBER DAS UNTERNEHMEN"
+                },
+                "urls": [
+                    {
+                        "name": {
+                            "en": "About Us",
+                            "de": "Über Uns"
+                        },
+                        "route": {
+                            "en": "/about-us",
+                            "de": "/%C3%BCber-uns"
+                        }
+                    },
+                    {
+                        "name": {
+                            "en": "Privacy Policy",
+                            "de": "Datenschutz"
+                        },
+                        "route": {
+                            "en": "/privacy-policy",
+                            "de": "/datenschutz"
+                        }
+                    }
+                ]
+            }
+        },
+        "extras": {
+            "phone": {
+                "en": "+49 ( 89 ) 45203680",
+                "de": "+49 ( 89 ) 45203680"
+            },
+            "rights": {
+               "en": "© 2024 Mangopost All rights reserved.",
+                "de":"© 2024 Mangopost Alle Rechte vorbehalten." 
+            }
+        }
+    }
+}

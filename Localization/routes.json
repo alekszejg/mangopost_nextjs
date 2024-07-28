@@ -1,0 +1,22 @@
+{
+    "homepage": {
+        "en": "/en",
+        "de": "/"
+    },
+    "aboutUs": {
+        "en": "/about-us",
+        "de": "/%C3%BCber-uns"
+    },
+    "onDemandDelivery": {
+        "en": "/on-demand-delivery",
+        "de": "/auf-anruf-lieferung"
+    },
+    "scheduledDelivery": {
+        "en": "/scheduled-delivery",
+        "de": "/geplante-lieferung"
+    },
+    "privacyPolicy": {
+        "en": "/privacy-policy",
+        "de": "/datenschutz"
+    }
+}

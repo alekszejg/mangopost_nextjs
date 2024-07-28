@@ -1,0 +1,109 @@
+{
+    "hero": {
+        
+        "text": {
+            "en": "A professional food delivery will arrive to your workplace to provide food from nearby restaurants of your choice.",
+            "de": "Ein professioneller Essenslieferdienst wird an Ihren Arbeitsplatz kommen, um Essen von nahegelegenen Restaurants Ihrer Wahl zu liefern."
+        },
+
+        "serviceCards": {
+            "onDemand": {
+                "header": {
+                    "en": "ON-DEMAND DELIVERY",
+                    "de": "AUF ANRUF LIEFERUNG"
+                },
+                "text": {
+                    "en": "Order food for yourself or together with your colleagues",
+                    "de": "Bestellen Sie Mahlzeiten für sich selbst oder gemeinsam mit Ihren Kollegen."
+                },
+                "button": {
+                    "en": "ORDER NOW",
+                    "de": "JETZT BESTELLEN"
+                }
+            },
+
+            "scheduled": {
+                "header": {
+                    "en": "SCHEDULED DELIVERY",
+                    "de": "GEPLANTE LIEFERUNG"
+                },
+                "text": {
+                    "en": "View scheduled daily meals for your company",
+                    "de": "Sehen Sie sich die geplanten täglichen Mahlzeiten für Ihr Unternehmen an."
+                },
+                "button": {
+                    "en": "LEARN MORE",
+                    "de": "MEHR ERFAHREN"
+                }
+            }
+        }
+    },
+
+
+    "serviceCards": {
+        
+        "onDemand": {
+            "header": {
+                "en": "ON-DEMAND DELIVERIES",
+                "de": "AUF ANRUF LIEFERUNGEN"
+            },
+            "text": {
+                "en": "Order group deliveries for lunches and events",
+                "de": "Bestellen Sie Gruppenlieferungen für Mittagessen und Veranstaltungen"
+            },
+            "features": {
+                "en": [
+                    "Individual and group orders", 
+                    "Reliable and efficient delivery"
+                ],
+                "de": [
+                    "Einzel- und Gruppenbestellungen", 
+                    "Zuverlässige und effiziente Lieferung"
+                ]
+            },
+            "buttons": {
+                "orderNow": {
+                    "en": "ORDER NOW",
+                    "de": "JETZT BESTELLEN"
+                },
+                "learnMore": {
+                    "en": "LEARN MORE",
+                    "de": "MEHR ERFAHREN"
+                }
+            }
+        },
+
+        "scheduled": {
+            "header": {
+                "en": "SCHEDULED DELIVERIES",
+                "de": "GEPLANTEN LIEFERUNGEN"
+            },
+            "text": {
+                "en": "View deliveries that were scheduled for you",
+                "de": "Sehen Sie sich die Lieferungen an, die für Sie geplant wurden"
+            },
+            "features": {
+                "en": [
+                    "Many food choices available for scheduling", 
+                    "Reliable and efficient delivery", 
+                    "Get your meal on time"
+                ],
+                "de": [
+                    "Viele Mahlzeiten zur Auswahl für die Planung verfügbar", 
+                    "Zuverlässige und effiziente Lieferung", 
+                    "Erhalten Sie Ihre Mahlzeit pünktlich"
+                ]
+            },
+            "buttons": {
+                "registerNow": {
+                    "en": "REGISTER NOW",
+                    "de": "JETZT REGISTRIEREN"
+                },
+                "learnMore": {
+                    "en": "LEARN MORE",
+                    "de": "MEHR ERFAHREN"
+                }
+            }
+        }
+    }
+}
