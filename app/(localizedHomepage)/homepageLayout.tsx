@@ -1,7 +1,7 @@
 import PageWrapper from '@/Components/Layout/fullPage'; 
 import Section from '@/Components/Layout/section';
-import Hero from './sections/hero/hero';
-import ServiceCard from './sections/serviceCards/serviceCard';
+import Hero from '@/Components/Homepage/hero';
+import ServiceCard from '@/Components/Homepage/serviceCard';
 
 import { LanguageType, ServiceType } from '@/app/layout';
 import { ButtonCategory } from "@/Components/UI/buttons";
@@ -14,7 +14,7 @@ import officeLunch from "@/public/Images/officeLunch.jpg";
 import onDemandApp from "@/public/Images/onDemandApp.jpg";
 
 
-export default function Homepage(props: {language: LanguageType}) {
+export default function HomepageLayout(props: {language: LanguageType}) {
     const { language } = props;
 
     const styling = {

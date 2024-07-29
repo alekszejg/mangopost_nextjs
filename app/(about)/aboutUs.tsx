@@ -2,8 +2,8 @@ import React from 'react';
 import localization from "@/Localization/aboutUs.json";
 import { LanguageType } from "@/app/layout";
 
-import PageWrapper from '../Layout/fullPage'; 
-import Section from '../Layout/section';
+import PageWrapper from '../../Components/Layout/fullPage'; 
+import Section from '../../Components/Layout/section';
 
 
 export default function AboutUsPage(props: {language: LanguageType;}) {

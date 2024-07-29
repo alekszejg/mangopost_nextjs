@@ -1,5 +1,5 @@
 import Container from '@/Components/Layout/container';
-import HeaderImage from './headerImage';
+import HeaderImage from './heroHeaderImage';
 import ServicePreview from './servicePreview';
 
 import localization from "@/Localization/homepage.json";

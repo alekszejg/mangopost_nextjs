@@ -7,7 +7,7 @@ import { LanguageType, LocalizedValues } from "@/app/layout";
 type LocalizedHeaderImage = {mobile: LocalizedValues; desktop: LocalizedValues;}
 
 
-export default function HeaderImage(props: {language: LanguageType; imgSrc: LocalizedHeaderImage}) {
+export default function HeroHeaderImage(props: {language: LanguageType; imgSrc: LocalizedHeaderImage}) {
     const { language, imgSrc } = props;
     
     const styling = {

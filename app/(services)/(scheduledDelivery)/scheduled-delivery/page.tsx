@@ -1,4 +1,4 @@
-import ScheduledDeliveryPage from "@/Components/Services/scheduledDelivery";
+import ScheduledDeliveryLayout from "../scheduledLayout";
 import React from "react";
 
 import type { Metadata } from "next";
@@ -8,5 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function ScheduledDeliveryEnglish() {
-    return <ScheduledDeliveryPage language="en" />
+    return <ScheduledDeliveryLayout language="en" />
 }

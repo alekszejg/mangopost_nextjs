@@ -1,7 +1,7 @@
-import PrivacyPolicy from "@/Components/PrivacyPolicyPage/privacyPolicy";
+import PrivacyPolicyLayout from "../privacyPolicyLayout";
 import React from "react";
 
 // CURRENTLY ONLY GERMAN VERSION AVAILABLE
 export default function PrivacyPolicyEn() {
-    return <PrivacyPolicy language="en" />;
+    return <PrivacyPolicyLayout language="en" />;
 }

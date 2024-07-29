@@ -2,7 +2,7 @@ import PageWrapper from '@/Components/Layout/fullPage';
 import { LanguageType } from "@/app/layout";
 
 
-export default function PrivacyPolicy(props: {language: LanguageType}) {
+export default function PrivacyPolicyLayout(props: {language: LanguageType}) {
     const { language } = props;
 
     const styling = {

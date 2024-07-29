@@ -1,4 +1,4 @@
-import AboutUsPage from "@/Components/AboutUsPage/aboutUs";
+import AboutUsPage from "@/app/(about)/aboutUs";
 import React from "react";
 
 import type { Metadata } from "next";

@@ -1,4 +1,4 @@
-import OnDemandDeliveryPage from "@/Components/Services/onDemandDelivery";
+import OnDemandDeliveryLayout from "../onDemandLayout";
 import React from "react";
 
 import type { Metadata } from "next";
@@ -9,5 +9,5 @@ export const metadata: Metadata = {
 
 
 export default function onDemandDeliveryGerman(){
-    return <OnDemandDeliveryPage language="de" />
+    return <OnDemandDeliveryLayout language="de" />
 }

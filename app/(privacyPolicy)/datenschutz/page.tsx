@@ -1,6 +1,6 @@
-import PrivacyPolicy from "@/Components/PrivacyPolicyPage/privacyPolicy";
+import PrivacyPolicyLayout from "../privacyPolicyLayout";
 import React from "react";
 
 export default function PrivacyPolicyDe() {
-    return <PrivacyPolicy language="de"/>;
+    return <PrivacyPolicyLayout language="de"/>;
 }

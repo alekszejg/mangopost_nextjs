@@ -12,7 +12,7 @@ interface ServicePreviewProps {
     button: {url: string, text: string}
 };
 
-export default function ServicePreview(props: ServicePreviewProps) {
+export default function HeroServicePreview(props: ServicePreviewProps) {
     const { imgSrc, imgAlt, header, text, button } = props;
 
     const styling = {

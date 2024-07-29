@@ -1,4 +1,4 @@
-import Homepage from "../Components/Homepage";
+import HomepageLayout from "./(localizedHomepage)/homepageLayout";
 import React from "react";
 
 import type { Metadata } from "next";
@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 export default function HomepageGerman() {
-    return <Homepage language="de" />
+    return <HomepageLayout language="de" />
 }
 
 
