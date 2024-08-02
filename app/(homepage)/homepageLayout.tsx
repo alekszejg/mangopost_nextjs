@@ -1,7 +1,7 @@
 import PageWrapper from '@/Components/Layout/fullPage'; 
 import Section from '@/Components/Layout/section';
-import Hero from '@/Components/Homepage/hero';
-import ServiceCard from '@/Components/Homepage/serviceCard';
+import Hero from '@/app/(homepage)/(sections)/(hero)/hero';
+import ServiceCard from '@/app/(homepage)/(sections)/(services)/serviceCard'
 
 import { LanguageType, ServiceType } from '@/app/layout';
 import { ButtonCategory } from "@/Components/UI/buttons";
@@ -18,22 +18,20 @@ export default function HomepageLayout(props: {language: LanguageType}) {
     const { language } = props;
 
     const styling = {
+        // 10rem to account for horizontal margins (mx-20)
         pageWrapper: {
-            en: "mx-6 tablet:mx-0 min-750px:mx-20 ultrawide:mx-0", 
-            de: "mx-6 tablet:mx-0 min-750px:mx-20 ultrawide:mx-0"
+            general: "max-w-[calc(1400px-10rem)] ultrawide:mx-auto", 
+            en: "min-750px:mx-20", 
+            de: "min-750px:mx-20"
         },
-        sections: {
-            hero: {
-                general: "flex flex-col items-center max-w-[calc(1400px-10rem)] py-7 ultrawide:justify-center ultrawide:gap-x-10 ultrawide:mx-auto",
-                en: "min-750px:flex-row min-750px:items-stretch min-750px:gap-x-8 min-750px:py-14 min-750px:mt-4",
-                de: "min-800px:flex-row min-800px:items-stretch min-800px:gap-x-8 min-800px:py-14 min-800px:mt-4"
-            },
-            serviceCard: {
-                general: "flex flex-col py-12 mb-12 shadow-[0_2px_8px_-3px] shadow-black max-w-[calc(1400px-10rem)] ultrawide:mx-auto",
-                en: "min-800px:flex-row min-800px:justify-center min-800px:items-center min-800px:imgTextGap min-800px:py-28 min-800px:rounded-3xl",
-                de: "desktop:flex-row desktop:justify-center desktop:items-center desktop:imgTextGap desktop:py-28 desktop:rounded-3xl"
-            },
-        }    
+        heroSection: {
+            general: "flex flex-col items-center py-7 ultrawide:gap-x-10",
+            en: "min-750px:flex-row min-750px:items-stretch min-750px:gap-x-8 min-750px:py-16",
+            de: "min-800px:flex-row min-800px:items-stretch min-800px:gap-x-8 min-800px:py-16"
+        },
+        serviceCardsSection: "flex flex-col gap-y-14 pt-7 pb-20",
+        servicesHeader: "text-center font-jost-extrabold tracking-wide text-xl",
+        servicesDescription: "text-center text-base"
     };
     
     const serviceCardProps = {
@@ -83,20 +81,20 @@ export default function HomepageLayout(props: {language: LanguageType}) {
 
     
     return (
-        <PageWrapper language={language} margins={styling.pageWrapper[language]}>
+        <PageWrapper language={language} margins={`${styling.pageWrapper.general} ${styling.pageWrapper[language]}`}>
             
-            <Section styling={`${styling.sections.hero.general} ${styling.sections.hero[language]}`}>
+            <Section styling={`${styling.heroSection.general} ${styling.heroSection[language]}`}>
                 <Hero language={language} />
             </Section>
 
-            <Section styling={`${styling.sections.serviceCard.general} ${styling.sections.serviceCard[language]}`}>
+            <h2 className={styling.servicesHeader}>{localization.serviceCards.mainHeader[language]}</h2>
+            <p className={styling.servicesDescription}>{localization.serviceCards.description[language]}</p>
+            
+            <Section styling={styling.serviceCardsSection}>
                 <ServiceCard {...serviceCardProps.onDemand} />
-            </Section>
-
-            <Section styling={`${styling.sections.serviceCard.general} ${styling.sections.serviceCard[language]}`}>
                 <ServiceCard {...serviceCardProps.scheduled} />
             </Section>
-    
+
         </PageWrapper>
     );
 }

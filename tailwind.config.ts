@@ -9,6 +9,7 @@ const config: Config = {
     fontFamily: {
       'jost-regular': ['Jost-Regular', 'sans-serif'],
       'jost-medium': ['Jost-Medium', 'sans-serif'],
+      'jost-medium-italic': ['Jost-Medium-Italic', 'sans-serif'],
       'jost-bold': ['Jost-Bold', 'sans-serif'],
       'jost-extrabold': ['Jost-Extra-Bold', 'sans-serif'],
       'jost-black': ['Jost-Black', 'sans-serif'],
@@ -18,6 +19,7 @@ const config: Config = {
       'tablet': '480px',
       
       'min-650px': '650px',
+      'min-700px': '700px',
       'min-750px': '750px',
       'min-800px': '800px',
       'min-900px': '900px',

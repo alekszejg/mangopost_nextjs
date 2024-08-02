@@ -1,6 +1,6 @@
-
 import Image from "next/image";
 
+import Container from "@/Components/Layout/container";
 import { Button, ButtonGroup } from "@/Components/UI/buttons";
 
 import { ServiceCardProps } from "./serviceCard";
@@ -13,21 +13,13 @@ export default function ServiceCardText(props: ServiceCardProps) {
     
     const styling = {
         header: {
-            general: "w-full mt-2 text-center font-jost-extrabold tracking-wide text-2xl tablet:mt-0",
+            general: "w-full mt-2 text-center font-jost-extrabold tracking-wide text-lg tablet:mt-0",
             en: "min-800px:text-start",
             de: "desktop:text-start"
         },
-        text: {
-            general: "text-lg mx-6 tablet:mx-0 tablet:text-center",
-            en: "min-800px:text-left",
-            de: "desktop:text-left"
-        },
-        featureList: {
-            general: "mt-3 mx-6 tablet:mx-0 tablet:self-center",
-            en: "min-800px:self-start",
-            de: "desktop:self-start"
-        },
-        featureItem: "flex items-center text-lg font-jost-medium",
+        description: "text-base",
+        featureList: "mt-3",
+        featureItem: "flex items-center text-base font-jost-medium",
         checkmarkIcon: "w-8 pr-3",
         buttonGroup: {
             general: "flex flex-col items-center w-full mt-6 font-jost-bold tablet:gap-x-10",
@@ -58,22 +50,20 @@ export default function ServiceCardText(props: ServiceCardProps) {
     
     return (
         <>
-            <h2 className={`${styling.header.general} ${styling.header[language]}`}>{header}</h2>
-            <p className={`${styling.text.general} ${styling.text[language]}`}>{text}</p>
-            
-            <ul className={`${styling.featureList.general} ${styling.featureList[language]}`}>
-                {features.map((feature, index) => (
-                    <li key={index} className={index !== 0 ? `mt-3 ${styling.featureItem}` : `${styling.featureItem}`}>
-                        <Image className={styling.checkmarkIcon} src={checkmarkIcon} alt="checkmark" /> 
-                        {feature}
-                    </li>
-                ))}
-            </ul>
-
-            <ButtonGroup styling={`${styling.buttonGroup.general} ${styling.buttonGroup[language]}`}>
-                <Button {...button1Props} />
-                <Button {...button2Props} />
-            </ButtonGroup>
+        <h2 className={`${styling.header.general} ${styling.header[language]}`}>{header}</h2>
+        <p className={styling.description}>{text}</p>
+        <ul className={styling.featureList}>
+            {features.map((feature, index) => (
+                <li key={index} className={index !== 0 ? `mt-3 ${styling.featureItem}` : `${styling.featureItem}`}>
+                    <Image className={styling.checkmarkIcon} src={checkmarkIcon} alt="checkmark" /> 
+                    {feature}
+                </li>
+            ))}
+        </ul>
+        <ButtonGroup styling={`${styling.buttonGroup.general} ${styling.buttonGroup[language]}`}>
+            <Button {...button1Props} />
+            <Button {...button2Props} />
+        </ButtonGroup>
         </>
     );
 }

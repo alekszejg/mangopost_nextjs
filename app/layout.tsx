@@ -27,7 +27,6 @@ export const metadata: Metadata = {
     ],
     other: [
       { rel: 'icon', url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' }, 
-      { rel: 'icon', url: '/mstile-150x150.png', sizes: '150x150', type: 'image/png' },  
       { rel: 'mask-icon', url: '/safari-pinned-tab.svg', color: '#ffbb00' },  
     ],
   },
@@ -57,7 +56,13 @@ export default function RootLayout(props: Readonly<{children: ReactNode;}>) {
   return (
     <html lang={htmlLanguage as LanguageType}>
       <body>
+      <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T87ZV483" height="0" width="0" className="none hidden">
+          </iframe>
+        </noscript>
+
         {children}
+
       </body>
     </html>
   );

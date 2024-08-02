@@ -1,8 +1,8 @@
 import PageWrapper from '@/Components/Layout/fullPage';
 import Section from '@/Components/Layout/section'; 
-import ServiceStages from "@/Components/Services/serviceStages";
-import CompareServices from "@/Components/Services/compareServices";
-import ServiceFeatures from "@/Components/Services/serviceFeatures";
+import ServiceStages from "@/app/(services)/(sections)/(orderStages)/serviceStages";
+import CompareServices from "@/app/(services)/(sections)/(comparison)/compareServices";
+import ServiceFeatures from "@/app/(services)/(sections)/(features)/serviceFeatures";
 
 import localization from "@/Localization/services.json";
 import allRoutes from "@/Localization/routes.json";
@@ -26,10 +26,16 @@ export default function OnDemandDeliveryLayout(props: {language: LanguageType}) 
             en: "min-750px:mx-20 ultrawide:mx-0", 
             de:"min-800px:mx-20 ultrawide:mx-0"
         },
-        sections: {
-            stages: "py-12",
-            comparison: "py-12",
-            features: "flex flex-col items-center pb-16 mx-6"
+        stagesSection: {
+            general: "flex flex-col items-center py-7 mx-6 min-800px:mx-0",
+            en: "min-750px:py-16",
+            de: "min-800px:py-16" 
+        },
+        comparisonSection: "py-7 min-800px:py-12",
+        featuresSection: {
+            general: "flex flex-col items-center pb-16 mx-6",
+            en: "max-w-[750px] min-750px:mx-auto",
+            de: "max-w-[800px] min-800px:mx-auto"
         }
     };
 
@@ -93,18 +99,16 @@ export default function OnDemandDeliveryLayout(props: {language: LanguageType}) 
         text: localization.onDemand.text.features[language],
         features: [
             {
-                imgOrder: "tablet:order-1",
-                textOrder: "tablet:order-2",
-                imgStyling: "mobile:w-[187px] min-800px:w-[237px]",
+                textOrder: "min-700px:order-2",
+                imgStyling: "w-[187px] min-700px:w-[237px] min-700px:order-1",
                 imgSrc: foodDriver,
                 imgAlt: "food delivery icon",
                 header: localization.shared.features.drivers.header[language],
                 text: localization.shared.features.drivers.text[language]
             },
             {
-                imgOrder: "tablet:order-2",
-                textOrder: "tablet:order-1",
-                imgStyling: "w-[149px] min-800px:w-[200px]",
+                textOrder: "min-700px:order-1",
+                imgStyling: "w-[149px] min-700px:w-[200px] min-700px:order-2",
                 imgSrc: customerSupport,
                 imgAlt: "customer support icon",
                 header: localization.shared.features.customerSupport.header[language],
@@ -116,15 +120,15 @@ export default function OnDemandDeliveryLayout(props: {language: LanguageType}) 
     return (
         <PageWrapper language={language} margins={styling.pageWrapper[language]}>
             
-            <Section styling={styling.sections.stages}>
+            <Section styling={`${styling.stagesSection.general} ${styling.stagesSection[language]}`}>
                 <ServiceStages {...serviceStageProps} />
             </Section>
             
-            <Section styling={styling.sections.comparison}>
+            <Section styling={styling.comparisonSection}>
                 <CompareServices {...compareServicesProps} />
             </Section>
 
-            <Section styling={styling.sections.features}>
+            <Section styling={`${styling.featuresSection.general} ${styling.featuresSection[language]}`}>
                 <ServiceFeatures {...featuresSectionProps} />
             </Section>
 

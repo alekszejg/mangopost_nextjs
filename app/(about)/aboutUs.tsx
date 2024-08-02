@@ -11,8 +11,8 @@ export default function AboutUsPage(props: {language: LanguageType;}) {
     
     const styling = {
         wrappers: {
-            pageBody: "mx-6 tablet:mx-10 ultrawide:mx-0",
-            about: "max-w-[700px] pt-12 pb-6 min-800px:mx-auto", 
+            pageBody: "max-w-[700px] mx-6 tablet:mx-10 min-800px:mx-auto",
+            about: "pt-12 pb-6", 
             contact: "pt-6 pb-12"
         },
         headers: {

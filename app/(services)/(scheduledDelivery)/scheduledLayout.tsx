@@ -1,8 +1,8 @@
 import PageWrapper from '@/Components/Layout/fullPage'; 
 import Section from '@/Components/Layout/section';
-import ServiceStages from "@/Components/Services/serviceStages";
-import CompareServices from "@/Components/Services/compareServices";
-import ServiceFeatures from "@/Components/Services/serviceFeatures";
+import ServiceStages from "@/app/(services)/(sections)/(orderStages)/serviceStages";
+import CompareServices from "@/app/(services)/(sections)/(comparison)/compareServices";
+import ServiceFeatures from "@/app/(services)/(sections)/(features)/serviceFeatures";
 
 import localization from "@/Localization/services.json";
 import allRoutes from "@/Localization/routes.json";
@@ -28,11 +28,17 @@ export default function ScheduledDeliveryLayout(props: {language: LanguageType})
             en: "min-750px:mx-20 ultrawide:mx-0", 
             de:"min-800px:mx-20 ultrawide:mx-0"
         },
-        sections: {
-            stages: "flex flex-col items-center py-12",
-            comparison: "py-12",
-            features: "flex flex-col items-center pb-16 mx-6"
-        }
+        stagesSection: {
+            general: "flex flex-col items-center py-7 mx-6 min-800px:mx-0 ",
+            en: "min-750px:py-12",
+            de: "min-800px:py-12"
+        },
+        comparisonSection: "py-7 min-800px:py-12",
+        featuresSection: {
+            general: "flex flex-col items-center pb-16 mx-6",
+            en: "max-w-[750px] min-750px:mx-auto",
+            de: "max-w-[800px] min-800px:mx-auto"
+        } 
     };
 
     const serviceStageProps = {
@@ -75,7 +81,7 @@ export default function ScheduledDeliveryLayout(props: {language: LanguageType})
             features: localization.shared.comparison.onDemand.features[language],
             buttons: [
                 {
-                    category: "orderNow" as ButtonCategory,
+                    category: "general" as ButtonCategory,
                     url: "https://shop.mangopost.app/menu",
                     text: localization.onDemand.buttons.orderNow[language]
                 },
@@ -93,12 +99,12 @@ export default function ScheduledDeliveryLayout(props: {language: LanguageType})
             features: localization.shared.comparison.scheduled.features[language],
             buttons: [
                 {
-                    category: "signup" as ButtonCategory,
+                    category: "general" as ButtonCategory,
                     url: "https://shop.mangopost.app/customerdata/registration",
                     text: localization.scheduled.buttons.signup[language]
                 },
                 {
-                    category: "login" as ButtonCategory,
+                    category: "general" as ButtonCategory,
                     url: "https://shop.mangopost.app/menu",
                     text: localization.scheduled.buttons.login[language]
                 }
@@ -111,27 +117,24 @@ export default function ScheduledDeliveryLayout(props: {language: LanguageType})
         text: localization.scheduled.text.features[language],
         features: [
             {
-                imgOrder: "tablet:order-1",
-                textOrder: "tablet:order-2",
-                imgStyling: "w-[203px] min-800px:w-[253px]",
+                textOrder: "min-700px:order-2",
+                imgStyling: "w-[203px] min-700px:w-[253px] min-700px:order-1",
                 imgSrc: favouriteFood,
                 imgAlt: "food plate icon",
                 header: localization.shared.features.favouriteFood.header[language],
                 text: localization.shared.features.favouriteFood.text[language]
             },
             {
-                imgOrder: "tablet:order-2",
-                textOrder: "tablet:order-1",
-                imgStyling: "w-[187px] min-800px:w-[237px]",
+                textOrder: "min-700px:order-1",
+                imgStyling: "w-[187px] min-700px:w-[237px] min-700px:order-2",
                 imgSrc: foodDriver,
                 imgAlt: "food delivery icon",
                 header: localization.shared.features.drivers.header[language],
                 text: localization.shared.features.drivers.text[language]
             },
             {
-                imgOrder: "tablet:order-1",
-                textOrder: "tablet:order-2",
-                imgStyling: "w-[149px] min-800px:w-[200px]",
+                textOrder: "min-700px:order-2",
+                imgStyling: "w-[149px] min-700px:w-[200px] min-700px:order-1",
                 imgSrc: customerSupport,
                 imgAlt: "customer support icon",
                 header: localization.shared.features.customerSupport.header[language],
@@ -143,15 +146,15 @@ export default function ScheduledDeliveryLayout(props: {language: LanguageType})
     return (
         <PageWrapper language={language} margins={styling.pageWrapper[language]}>
             
-            <Section styling={styling.sections.stages}>
+            <Section styling={`${styling.stagesSection.general} ${styling.stagesSection[language]}`}>
                 <ServiceStages {...serviceStageProps} />
             </Section>
 
-            <Section styling={styling.sections.comparison}>
+            <Section styling={styling.comparisonSection}>
                 <CompareServices {...compareServicesProps} />
             </Section>
 
-            <Section styling={styling.sections.features}>
+            <Section styling={`${styling.featuresSection.general} ${styling.featuresSection[language]}`}>
                 <ServiceFeatures {...featuresProps} />
             </Section>
             

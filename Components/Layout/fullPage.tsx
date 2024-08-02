@@ -10,7 +10,7 @@ import MainSection from "./mainSection";
 import Footer from "./Footer/footer";
 
 // COMPONENTS: WIDGETS
-import { ChatWidget, WhatsappWidget } from "../UI/widgets";
+import { ChatWidget, WhatsappWidget, GoogleManager } from "../UI/widgets";
 
 
 export default function PageWrapper(props: {children: ReactNode; language: LanguageType; margins: string}) {
@@ -26,6 +26,7 @@ export default function PageWrapper(props: {children: ReactNode; language: Langu
         
         <WhatsappWidget language={language} />
         <ChatWidget />
+        <GoogleManager />
 
         <Footer language={language} />
         </>

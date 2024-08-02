@@ -28,7 +28,7 @@ export function WhatsappWidget(props : {language: LanguageType}) {
         de: "Hallo Mangopost, wir möchten die beste Pizza in München!"
     };
 
-    const whatsappURL = `http://wa.me/4915730022160?text=${encodeURIComponent(predefinedMessage[language])}`
+    const whatsappURL = `http://wa.me/4915560310903?text=${encodeURIComponent(predefinedMessage[language])}`
 
     return (
         <Link href={whatsappURL} target="_blank" rel="noopener noreferrer">
@@ -36,5 +36,16 @@ export function WhatsappWidget(props : {language: LanguageType}) {
                 <Image src={whatsappIcon} alt="whatsapp icon" />
             </div>
         </Link>  
+    );
+}
+
+export function GoogleManager() {
+    return (
+        <Script id="google-analytics" strategy="afterInteractive" dangerouslySetInnerHTML={{__html: `
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-T87ZV483');`}} />
     );
 }

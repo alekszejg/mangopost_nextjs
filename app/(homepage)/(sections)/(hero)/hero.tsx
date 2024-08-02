@@ -1,5 +1,5 @@
 import Container from '@/Components/Layout/container';
-import HeaderImage from './heroHeaderImage';
+import HeroIntro from './heroIntro';
 import ServicePreview from './servicePreview';
 
 import localization from "@/Localization/homepage.json";
@@ -22,24 +22,24 @@ export default function Hero(props: {language: LanguageType}) {
 
     const styling = {
         introContainer: {
-            general: "flex flex-col items-center w-full tablet:w-4/5",
-            en: "min-750px:w-1/3 min-750px:max-w-[285px]",
-            de: "min-800px:w-1/3 min-800px:max-w-[350px]"
+            general: "flex flex-col items-center mx-6 tablet:mx-12",
+            en: "min-750px:w-1/3 min-750px:mx-0",
+            de: "min-800px:w-1/3 min-800px:max-w-[350px] min-800px:mx-0"
         },
         servicePreviewContainer: {
-            general: "w-full py-3",
+            general: "w-full py-5",
             en: "min-750px:flex min-750px:flex-col min-750px:w-1/3 min-750px:max-w-[420px] min-750px:py-0",
             de: "min-800px:flex min-800px:flex-col min-800px:w-1/3 min-800px:max-w-[420px] min-800px:py-0"
         },
-        text: "pt-6 pb-4 text-lg tablet:text-center min-750px:text-left",
     };
 
-    const headerImageProps = {
+    const introProps = {
         language: language, 
         imgSrc: {
             mobile: {en: heroHeaderImgEnCentered, de: heroHeaderImgDeCentered},
             desktop: {en: heroHeaderImgEnLeft, de: heroHeaderImgDeLeft}
-        }
+        },
+        text: localization.hero.text[language]
     };
 
     const servicePreviewProps = {
@@ -47,22 +47,22 @@ export default function Hero(props: {language: LanguageType}) {
             language: language,
             imgSrc: pizzaImage,
             imgAlt: "Image1",
-            header: localization.hero.serviceCards.onDemand.header[language],
-            text: localization.hero.serviceCards.onDemand.text[language],
+            header: localization.hero.servicePreviews.onDemand.header[language],
+            text: localization.hero.servicePreviews.onDemand.text[language],
             button: {
                 url: "https://shop.mangopost.app/menu",
-                text: localization.hero.serviceCards.onDemand.button[language]
+                text: localization.hero.servicePreviews.onDemand.button[language]
             }
         },
         scheduled: {
             language: language,
             imgSrc: foodDelivery,
             imgAlt: "Image1",
-            header: localization.hero.serviceCards.scheduled.header[language],
-            text: localization.hero.serviceCards.scheduled.text[language], 
+            header: localization.hero.servicePreviews.scheduled.header[language],
+            text: localization.hero.servicePreviews.scheduled.text[language], 
             button: {
                 url: allRoutes.scheduledDelivery[language],
-                text: localization.hero.serviceCards.scheduled.button[language]
+                text: localization.hero.servicePreviews.scheduled.button[language]
             }
         } 
     };
@@ -70,8 +70,7 @@ export default function Hero(props: {language: LanguageType}) {
     return (
         <>
         <Container styling={`${styling.introContainer.general} ${styling.introContainer[language]}`}>
-            <HeaderImage {...headerImageProps} />
-            <p className={styling.text}>{localization.hero.text[language]}</p>
+            <HeroIntro {...introProps} />
         </Container>
         
         <Container styling={`${styling.servicePreviewContainer.general} ${styling.servicePreviewContainer[language]}`}>

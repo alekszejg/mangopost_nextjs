@@ -6,7 +6,7 @@
             "de": "Ein professioneller Essenslieferdienst wird an Ihren Arbeitsplatz kommen, um Essen von nahegelegenen Restaurants Ihrer Wahl zu liefern."
         },
 
-        "serviceCards": {
+        "servicePreviews": {
             "onDemand": {
                 "header": {
                     "en": "ON-DEMAND DELIVERY",
@@ -42,14 +42,23 @@
 
     "serviceCards": {
         
+        "mainHeader": {
+            "en": "OUR SERVICES",
+            "de": "UNSERE DIENSTLEISTUNGEN"
+        },
+        "description": {
+            "en": "Whether you choose spontaneous deliveries for lunch or events at your workplace, or prefer regularly scheduled deliveries, Mangopost has everything you need.",
+            "de": "Ob Sie spontane Lieferungen für Mittagessen oder Veranstaltungen am Arbeitsplatz wählen oder regelmäßige Lieferungen bevorzugen, Mangopost hat alles, was Sie brauchen."
+        },
+
         "onDemand": {
             "header": {
                 "en": "ON-DEMAND DELIVERIES",
                 "de": "AUF ANRUF LIEFERUNGEN"
             },
             "text": {
-                "en": "Order group deliveries for lunches and events",
-                "de": "Bestellen Sie Gruppenlieferungen für Mittagessen und Veranstaltungen"
+                "en": "Spontaneous group deliveries for lunch and events",
+                "de": "Spontane Gruppenlieferungen für Mittagessen und Veranstaltungen"
             },
             "features": {
                 "en": [
@@ -79,8 +88,8 @@
                 "de": "GEPLANTEN LIEFERUNGEN"
             },
             "text": {
-                "en": "View deliveries that were scheduled for you",
-                "de": "Sehen Sie sich die Lieferungen an, die für Sie geplant wurden"
+                "en": "Regular planned food deliveries",
+                "de": "Regelmäßige Essenslieferungen für Ihr Unternehmen"
             },
             "features": {
                 "en": [
