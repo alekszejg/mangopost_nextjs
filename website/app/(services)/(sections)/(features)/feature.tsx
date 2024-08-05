@@ -3,7 +3,7 @@ import Container from "@/Components/Layout/container";
 import { FeatureProps } from "./serviceFeatures";
 
 export default function ServiceFeature(props: FeatureProps) {
-    const { imgStyling, imgSrc, imgAlt, textOrder, header, text } = props;
+    const { imgStyling, imgSrc, textOrder, header, text } = props;
     
     const styling = {
         imgContainer: imgStyling,
@@ -16,7 +16,7 @@ export default function ServiceFeature(props: FeatureProps) {
     return (
         <>
         <Container styling={styling.imgContainer}>
-            <Image className={styling.image} src={imgSrc} alt={imgAlt} />
+            <Image className={styling.image} src={imgSrc} alt="" />
         </Container>
 
         <Container styling={styling.textContainer}>

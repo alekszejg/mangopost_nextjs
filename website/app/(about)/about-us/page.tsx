@@ -1,4 +1,4 @@
-import AboutUsPage from "@/app/(about)/aboutUs";
+import AboutUsLayout from "../aboutLayout";
 import React from "react";
 
 import type { Metadata } from "next";
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
         canonical: "https://mangopost.app/about-us",
         languages: {
             'en-US': 'https://nextjs.org/about-us',
-            'de-DE': 'https://mangopost.app/über-uns',
+            'de-DE': 'https://mangopost.app/ueber-uns',
           },
     },
     openGraph: {
@@ -18,12 +18,12 @@ export const metadata: Metadata = {
         url: "https://mangopost.app/about-us",
         images: [
             {
-                url: "https://mangopost.app/whatsappImgMeta.png"
+                url: "https://mangopost.app/Images/whatsappImgMeta.png"
             },
         ]
     }
 };
 
 export default function AboutUsEnglish() {
-    return <AboutUsPage language="en" />
+    return <AboutUsLayout language="en" />
 }

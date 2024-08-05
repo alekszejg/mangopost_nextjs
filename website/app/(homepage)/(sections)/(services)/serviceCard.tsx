@@ -15,11 +15,10 @@ export interface ServiceCardProps {
     buttons: ButtonType[];
     features: string[];
     imgSrc: StaticImageData;
-    imgAlt: string;
 }
 
 export default function ServiceCard(props: ServiceCardProps) {
-    const { language, serviceType, imgSrc, imgAlt} = props;
+    const { language, serviceType, imgSrc } = props;
     
     const styling = {
         wrapper: {
@@ -49,7 +48,7 @@ export default function ServiceCard(props: ServiceCardProps) {
         <Container styling={`${styling.wrapper.general} ${styling.wrapper[language]}`}>
             
             <Container styling={`${styling.imgContainer.general} ${styling.imgContainer[serviceType][language]}`}>
-                <Image className="w-full h-full tablet:rounded-3xl" src={imgSrc} alt={imgAlt} />
+                <Image className="w-full h-full tablet:rounded-3xl" src={imgSrc} alt="" />
             </Container>
 
             <Container styling={`${styling.textContainer.general} ${styling.textContainer[serviceType][language]}`}>

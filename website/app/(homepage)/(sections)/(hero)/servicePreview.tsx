@@ -4,17 +4,16 @@ import Container from "@/Components/Layout/container";
 import { Button } from "@/Components/UI/buttons";
 import { LanguageType } from "@/app/layout";
 
-interface ServicePreviewProps {
+type ServicePreviewProps = {
     language: LanguageType;
     imgSrc: StaticImageData;
-    imgAlt: string;
     header: string;
     text: string;
     button: {url: string, text: string}
 };
 
 export default function HeroServicePreview(props: ServicePreviewProps) {
-    const { imgSrc, imgAlt, header, text, button } = props;
+    const { imgSrc, header, text, button } = props;
 
     const styling = {
         imgContainer: "aspect-[16/9]",
@@ -31,7 +30,7 @@ export default function HeroServicePreview(props: ServicePreviewProps) {
     return (
         <>
         <Container styling={styling.imgContainer}>
-            <Image className={styling.image} src={imgSrc} alt={imgAlt} />
+            <Image className={styling.image} src={imgSrc} alt="" />
         </Container>
         
         <Container styling={styling.textContainer}>

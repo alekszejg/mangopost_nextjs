@@ -1,13 +1,9 @@
-// NEXT.JS AND REACT FUNCTIONALITY
 import { headers } from 'next/headers';
+import type { Metadata } from "next";
 import { ReactNode } from 'react';
 
-// METADATA
-import type { Metadata } from "next";
-
-// STYLING
+import { allRoutes } from '@/middleware';
 import "@/index.css";
-
 
 // COMMON CUSTOM TYPES
 export type LanguageType = "en" | "de";
@@ -33,25 +29,10 @@ export const metadata: Metadata = {
 };
 
 
-// FOR FINDING LANGUAGE ASSOCIATED WITH SPECIFIC PATH
-const allRoutes: { [key: string]: string } = {
-  "/": "de",
-  "/en": "en",
-  "/%C3%BCber-uns": "de",
-  "/about-us": "en",
-  "/auf-anruf-lieferung": "de",
-  "/on-demand-delivery": "en",
-  "/geplante-lieferung": "de",
-  "/scheduled-delivery": "en"
-} 
-
-
-
 export default function RootLayout(props: Readonly<{children: ReactNode;}>) {
   const { children } = props;
-  
   const urlpath = headers().get("urlpath") || "en"; // fallback
-  const htmlLanguage = allRoutes[urlpath]
+  const htmlLanguage = allRoutes[urlpath] || "en";
   
   return (
     <html lang={htmlLanguage as LanguageType}>

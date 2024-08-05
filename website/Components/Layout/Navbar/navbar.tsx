@@ -5,6 +5,9 @@ import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { useRouter, usePathname } from "next/navigation";
 
+import Container from "../container";
+import ServicesDropdown from "./servicesDropdown";
+
 import mangopostLogo from "@/public/Images/mangopostLogo.svg";
 import blackArrowDownIcon from "@/public/Icons/blackArrowDown.svg";
 import burgerMenuIcon from "@/public/Icons/burgerMenu.svg";
@@ -15,6 +18,7 @@ import { LanguageType, LocalizedValues } from "@/app/layout";
 
 import localization from "@/Localization/navbarFooter.json";
 import allRoutes from "@/Localization/routes.json";
+
 
 
 interface allRoutesTypes {
@@ -58,7 +62,6 @@ export default function Navbar(props: {language: LanguageType;}) {
 
     const burgerMenuIconRef = useRef<HTMLImageElement>(null)
     const [burgerMenuClicked, setBurgerMenuClick] = useState(false);
-    
     const toggleBurgerMenu = () => {burgerMenuClicked === false ? setBurgerMenuClick(true) : setBurgerMenuClick(false);};
 
     useEffect(() => {
@@ -94,19 +97,32 @@ export default function Navbar(props: {language: LanguageType;}) {
             },
             links: {
                 aboutUs: "flex justify-center items-center h-full font-jost-extrabold tracking-wider linkHover text-lg",
-                orderNow: "flex justify-center items-center h-12 rounded-xl bg-gradient-to-r from-[#FFBB00] to-[#FFD900] font-jost-extrabold tracking-wider text-lg mobile:px-4 navMin-960px:px-4 navMin-960px:ml-3"
+                orderNow: "flex justify-center items-center h-12 px-4 rounded-xl bg-gradient-to-r from-[#FFBB00] to-[#FFD900] font-jost-extrabold tracking-wider text-lg navMin-960px:ml-3"
             },
             arrowDownIcon: "w-4 h-3 relative left-1.5 transition-all duration-75",
         },
+        dropdownContainer: "flex flex-col gap-y-4 pt-2 pb-8 w-full bg-white absolute top-12 shadow-[0_1px_2px] shadow-gray-400 navMin-960px:w-[260px] navMin-960px:gap-y-3 navMin-960px:py-4 navMin-960px:shadow-[0_1px_8px_-3px] navMin-960px:shadow-black navMin-960px:px-5 navMin-960px:rounded-lg",
         languageButton: {
             button: "w-11 mr-4 tablet:w-8 tablet:mr-3 navMin-960px:ml-3 navMin-960px:mr-0",
             icon: "w-full h-full"
         },
         burgerMenu: {
-            wrapper: "block h-1/3 pr-4 mobile:self-center tablet:h-1/4 navMin-960px:hidden",
+            wrapper: "block h-1/3 pr-4 self-center tablet:h-1/4 navMin-960px:hidden",
             icon: "w-auto h-full"
         } 
     }
+
+    const servicesDropdownProps = {
+        dropdownStatus: isDropdownVisible,
+        onDemand: {
+            title: localization.navbar.titles.dropdown.onDemand[language],
+            route: allRoutes.onDemandDelivery[language],
+        },
+        scheduled: {
+            title: localization.navbar.titles.dropdown.scheduled[language],
+            route: allRoutes.scheduledDelivery[language]
+        }
+    };
 
     return (
         <nav ref={navRef} className={styling.nav} onMouseLeave={handleMouseLeave}>
@@ -129,11 +145,16 @@ export default function Navbar(props: {language: LanguageType;}) {
                             </li>
 
                             <li className={styling.navList.items.orderNow}>
+                                
                                 <span className={styling.navList.links.orderNow} onMouseEnter={toggleDropdown} onClick={toggleDropdown}>
                                     {localization.navbar.titles.orderNow[clientLanguage]}
                                     <Image className={isDropdownVisible ? `rotate-[-180deg] ${styling.navList.arrowDownIcon}` : styling.navList.arrowDownIcon} src={blackArrowDownIcon} alt="" />
                                 </span>
-                                <ServicesDropdown {...{dropdownStatus: isDropdownVisible, language: clientLanguage}} />
+                                
+                                <Container styling={isDropdownVisible ? styling.dropdownContainer : "hidden"}>
+                                    <ServicesDropdown {...servicesDropdownProps} />
+                                </Container>
+
                             </li>
                         </ul>
 
@@ -154,23 +175,5 @@ export default function Navbar(props: {language: LanguageType;}) {
 }
 
 
-function ServicesDropdown(props: {dropdownStatus: boolean; language: LanguageType}) {
-    const { dropdownStatus, language } = props;
-    const styling = {
-        wrapper: "flex flex-col gap-y-4 pt-2 pb-8 w-full bg-white absolute top-12 shadow-[0_1px_2px] shadow-gray-400 navMin-960px:w-[260px] navMin-960px:gap-y-3 navMin-960px:py-4 navMin-960px:shadow-[0_1px_8px_-3px] navMin-960px:shadow-black navMin-960px:px-5 navMin-960px:rounded-lg",
-        links: "text-base text-center hover:text-[#FFB200] hover:opacity-90 font-jost-extrabold tracking-wider"
-    };
 
-    return (
-        <div className={dropdownStatus ? styling.wrapper : "hidden"}>
-            <Link className={styling.links} href={allRoutes.onDemandDelivery[language]}>
-                {localization.navbar.titles.dropdown.onDemand[language]}
-            </Link>
-
-            <Link className={styling.links} href={allRoutes.scheduledDelivery[language]}>
-                {localization.navbar.titles.dropdown.scheduled[language]}
-            </Link>  
-        </div>
-    )
-}
 

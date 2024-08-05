@@ -23,11 +23,16 @@ export default function HeroIntro(props: {language: LanguageType; imgSrc: Locali
         text: "pt-6 text-lg tablet:text-center min-750px:text-left",
     };
 
+    const imageAlt = {
+        en: "The best way to order food at work",
+        de: "Die Beste Art, am Arbeitsplatz Essen zu bestellen"
+    }
+
     return (
         <>
         <Container styling={styling.imgContainer}>
-            <Image className={styling.imgMobile[language]} src={imgSrc.mobile[language]} alt="a homepage header"/>
-            <Image className={styling.imgDesktop[language]} src={imgSrc.desktop[language]} alt="a homepage header" />
+            <Image className={styling.imgMobile[language]} src={imgSrc.mobile[language]} alt={imageAlt[language]}/>
+            <Image className={styling.imgDesktop[language]} src={imgSrc.desktop[language]} alt={imageAlt[language]} />
         </Container>
         <p className={styling.text}>{text}</p>
         </> 

@@ -5,8 +5,8 @@ export default function MainSection(props: {children: ReactNode; styling: string
     const { children, styling } = props;
     
     return (
-        <div className={styling}>
+        <main className={styling}>
             {children}
-        </div>  
+        </main>  
     );
 }

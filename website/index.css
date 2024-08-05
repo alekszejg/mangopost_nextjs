@@ -51,31 +51,14 @@
   }
 }
 
-/* PRIVACY POLICY GENERAL STYLING */ 
-@layer components {
-  #privacyPolicyContainer {
-      h2 {
-          @apply mb-3 text-lg font-jost-bold;
-      }
-
-      .privacyPolicyParagraph {
-          @apply mb-6;
-      }
-
-      a, .email {
-          @apply underline text-[#0000EE] visited:text-[#551A8B];
-      }
-      
-      ul {
-          list-style-type: square;
-          @apply pl-10 mb-6;
-      }
-  }
-}
-
+/* SETTING CLAMPS (unavailable without extra plugins) */
 @layer components {
   .imgTextGap {
     column-gap: clamp(1rem, 4vw, 6rem);
+  }
+
+  .buttonClamp {
+    column-gap: clamp(1rem, 6vw, 4rem);
   }
 }
 

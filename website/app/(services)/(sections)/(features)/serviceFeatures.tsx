@@ -5,7 +5,6 @@ export type FeatureProps = {
     textOrder: string;
     imgStyling: string;
     imgSrc: string;
-    imgAlt: string;
     header: string;
     text: string;
 };

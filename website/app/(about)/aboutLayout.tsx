@@ -2,11 +2,11 @@ import React from 'react';
 import localization from "@/Localization/aboutUs.json";
 import { LanguageType } from "@/app/layout";
 
-import PageWrapper from '../../Components/Layout/fullPage'; 
-import Section from '../../Components/Layout/section';
+import PageWrapper from '@/Components/Layout/fullPage'; 
+import Section from '@/Components/Layout/section';
 
 
-export default function AboutUsPage(props: {language: LanguageType;}) {
+export default function AboutUsLayout(props: {language: LanguageType;}) {
     const { language } = props;
     
     const styling = {

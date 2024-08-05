@@ -1,16 +1,26 @@
+import Image from "next/image"
 import Link from "next/link";
 import { ReactNode } from 'react';
 
+import { StaticImageData } from "next/image";
 
-// BUTTON TYPES
 export type ButtonCategory = "general" | "learnMore";
 export type ButtonType = {category: ButtonCategory; url: string; text: string};
 
 
 // A SINGLE BUTTON
-interface ButtonProps {buttonStyling: string; category?: ButtonCategory; url: string; text: string}
+interface ButtonProps {
+    buttonStyling: string; 
+    url: string; 
+    text: string; 
+    imgSrc?: StaticImageData; 
+    imgAlt?: string;
+    imgStyling?: string;
+    category?: ButtonCategory;
+}
+
 export function Button(props: ButtonProps) {
-    const { buttonStyling, url, text } = props;
+    const { buttonStyling, url, text, imgSrc, imgAlt, imgStyling } = props;
     
     const styling = {
         button: buttonStyling,
@@ -20,6 +30,7 @@ export function Button(props: ButtonProps) {
     return (
         <button className={styling.button}>
             <Link className={styling.link} href={url} target="_blank" rel="noopener noreferrer">
+                {imgSrc && imgAlt && imgStyling && <Image className={imgStyling} src={imgSrc} alt={imgAlt} />}
                 {text}
             </Link>
         </button>

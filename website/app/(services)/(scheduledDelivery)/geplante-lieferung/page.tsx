@@ -18,7 +18,7 @@ export const metadata: Metadata = {
         url: "https://mangopost.app/geplante-lieferung",
         images: [
             {
-                url: "https://mangopost.app/whatsappImgMeta.png"
+                url: "https://mangopost.app/Images/whatsappImgMeta.png"
             },
         ]
     }

@@ -6,19 +6,23 @@ export default function PrivacyPolicyLayout(props: {language: LanguageType}) {
     const { language } = props;
 
     const styling = {
-        pageWrapper: {
-            en: "mobile:mx-6 tablet:mx-16 ultrawide:mx-24",
-            de: "mobile:mx-6 tablet:mx-16 ultrawide:mx-24"
+        pageBody: {
+            en: "mx-6 tablet:mx-16 ultrawide:mx-24",
+            de: "mx-6 tablet:mx-16 ultrawide:mx-24"
         },
-        container: "mt-10 pb-40 break-words"
+        container: "mt-10 pb-40 break-words",
+        headers: "mb-3 text-lg font-jost-bold",
+        lists: "list-square pl-10 mb-6",
+        links: "underline text-[#0000EE] visited:text-[#551A8B]",
+        emails: "underline text-[#0000EE] visited:text-[#551A8B]"
     }
 
     return (
-        <PageWrapper language={language} margins={styling.pageWrapper[language]}>
+        <PageWrapper language={language} margins={styling.pageBody[language]}>
             <div id="privacyPolicyContainer" className={styling.container}>
-                <h2>Informationen zur Datenverarbeitung gemäß Art. 13 DSGVO</h2>
+                <h2 className={styling.headers}>Informationen zur Datenverarbeitung gemäß Art. 13 DSGVO</h2>
                 <p className="mb-3">Diese Informationen zur Datenverarbeitung gelten für das Internetangebot der Gastroexpress GmbH, welches unter der 
-                    Domain <a href="shop.mangopost.app" target="_blank" rel="noopener noreferrer">shop.mangopost.app</a> sowie den verschiedenen Subdomains („unsere Webseite“) erreichbar ist. Zudem möchten 
+                    Domain <a className={styling.links} href="shop.mangopost.app" target="_blank" rel="noopener noreferrer">shop.mangopost.app</a> sowie den verschiedenen Subdomains („unsere Webseite“) erreichbar ist. Zudem möchten 
                     wir auch darüber informieren, wie wir personenbezogene Daten, die wir über andere Wege erhalten haben, speichern und nutzen.
                 </p>
                 <p className="mb-6">Die Firma Gastroexpress GmbH lehnt sich im Speziellen an die EU Datenschutz-Grundverordnung sowie an das aktuelle 
@@ -27,17 +31,16 @@ export default function PrivacyPolicyLayout(props: {language: LanguageType}) {
                 Informationen wir während Ihres Besuches auf unseren Webseiten erfassen und wie diese genutzt werden.
                 </p>
 
-                <h2>Wer ist verantwortlich und wie erreiche ich Sie?</h2>
+                <h2 className={styling.headers}>Wer ist verantwortlich und wie erreiche ich Sie?</h2>
                 <p className="mb-3">
                     Verantwortlicher für die Verarbeitung personenbezogener Daten im Sinne der EU-Datenschutz-Grundverordnung (DSGVO)
                 </p>
-                <p>Gastroexpress GmbH<br />Adresse: Rosenheimer Str. 30-32</p>
-                <p className="mb-3"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>81669 München</p>
-                <p className="mb-3">Telefon: +89 452 036 80<br />Email: <span className="email">info@mangopost.app</span></p>
+                <p className="mb-3">Gastroexpress GmbH<br />Adresse: Rosenheimer Str. 30-32, 81669 München</p>
+                <p className="mb-3">Telefon: +89 452 036 80<br />Email: <span className={styling.emails}>info@mangopost.app</span></p>
                 <p><b>Datenschutzbeauftragte/r</b></p>
                 <p className="mb-6"><i>Kontaktdaten, sofern vorhanden</i></p>
 
-                <h2>Worum geht es?</h2>
+                <h2 className={styling.headers}>Worum geht es?</h2>
                 <p className="mb-3">
                     Diese Datenschutzerklärung erfüllt die gesetzlichen Anforderungen an die Transparenz bei der Verarbeitung personenbezogener Daten. 
                     Dies sind alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen. Hierzu gehören beispielsweise 
@@ -54,7 +57,7 @@ export default function PrivacyPolicyLayout(props: {language: LanguageType}) {
                     von Rechtsansprüchen und bei Vorliegen gesetzlicher Aufbewahrungspflichten.
                 </p>
                 
-                <h2>Allgemeines zur Datenverarbeitung</h2>
+                <h2 className={styling.headers}>Allgemeines zur Datenverarbeitung</h2>
                 <p className="mb-3">
                     Wir erheben und verwenden personenbezogene Daten unserer Nutzer grundsätzlich nur, soweit dies zur Bereitstellung einer funktionsfähigen Webseite 
                     sowie unserer Inhalte und Leistungen erforderlich ist. Die Erhebung und Verwendung personenbezogener Daten unserer Nutzer erfolgt regelmäßig nur nach 
@@ -63,7 +66,7 @@ export default function PrivacyPolicyLayout(props: {language: LanguageType}) {
                 </p>
                 <p className="mb-3"><b>Rechtsgrundlage für die Verarbeitung personenbezogener Daten</b></p>
                 <p className="mb-6">Soweit wir für Verarbeitungsvorgänge personenbezogener Daten eine</p>
-                <ul>
+                <ul className={styling.lists}>
                     <li><b>Einwilligung der betroffenen Person</b> einholen, dient Art. 6 Abs. 1 lit. a DSGVO als Rechtsgrundlage.</li>
                     <li>
                         Bei der Verarbeitung von personenbezogenen Daten, die zur <b>Erfüllung eines Vertrages</b>, dessen Vertragspartei die betroffene Person ist, 
@@ -88,7 +91,7 @@ export default function PrivacyPolicyLayout(props: {language: LanguageType}) {
                     Speicherfrist abläuft, es sei denn, dass eine Erforderlichkeit zur weiteren Speicherung der Daten für einen Vertragsabschluss oder eine Vertragserfüllung besteht.
                 </p>
 
-                <h2>Wer bekommt meine Daten?</h2>
+                <h2 className={styling.headers}>Wer bekommt meine Daten?</h2>
                 <p className="mb-3">
                     Wir geben Ihre personenbezogenen Daten, die wir auf unserer Webseite verarbeiten nur dann an Dritte weiter, wenn dies für die Erfüllung der Zwecke 
                     erforderlich ist und im Einzelfall von der Rechtsgrundlage (z.B. Einwilligung oder Wahrung berechtigter Interessen) erfasst ist. Darüber hinaus geben 
@@ -101,12 +104,12 @@ export default function PrivacyPolicyLayout(props: {language: LanguageType}) {
                     von Webdiensten erhalten Sie in der Übersicht der einzelnen Verarbeitungsvorgänge.
                 </p>
 
-                <h2>Nutzung unseres Online-Stores</h2>
+                <h2 className={styling.headers}>Nutzung unseres Online-Stores</h2>
                 <p className="mb-6">
                     Auf unserer Internetseite gibt es die Möglichkeit, in unseren Stores Produkte auszuwählen, zu kaufen und liefern zu lassen. Wenn Sie diese Möglichkeit wahrnehmen, 
                     so werden die in der Eingabemaske eingegeben Daten an uns übermittelt und gespeichert. Diese Daten sind:
                 </p>
-                <ul>
+                <ul className={styling.lists}>
                     <li>Anrede, Vorname, Name</li>
                     <li>E-Mail-Adresse</li>
                     <li>Telefonnummer</li>
@@ -123,7 +126,7 @@ export default function PrivacyPolicyLayout(props: {language: LanguageType}) {
                     Wenn Sie von unserer Webseite eine Bestellung vornehmen, so geschieht das durch das Online-Bestellsystem der SimplyDelivery GmbH (SIDES), 
                     Wilhelm-Kabus-Straße 70/Haus 34.3, 10829 Berlin, Deutschland. Alle von Ihnen eingegebenen Bestelldaten werden verschlüsselt übertragen. Unser Vertragspartner 
                     hat sich zum datenschutzgerechten Umgang mit Ihren übermittelten Daten verpflichtet. Er ergreift alle organisatorischen und technischen Maßnahmen zum Schutz Ihrer 
-                    Daten. Weitere Hinweise zum Datenschutz entnehmen Sie bitte der <a href="https://www.get-sides.de/datenschutz/" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a> von SIDES.
+                    Daten. Weitere Hinweise zum Datenschutz entnehmen Sie bitte der <a className={styling.links} href="https://www.get-sides.de/datenschutz/" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a> von SIDES.
                 </p>
                 <p className="mb-3">
                     Die übermittelten Daten werden in unserem internen Bestellsystem gespeichert und zur Vertragsdurchführung genutzt. So wird im nächstgelegenen oder 
@@ -148,11 +151,11 @@ export default function PrivacyPolicyLayout(props: {language: LanguageType}) {
                     sperren sollen.
                 </p>
 
-                <h2>Welche Rechte haben Sie?</h2>
+                <h2 className={styling.headers}>Welche Rechte haben Sie?</h2>
                 <p className="mb-6">
                     Werden personenbezogene Daten von Ihnen verarbeitet, sind Sie Betroffener i.S.d. DSGVO und es stehen Ihnen folgende Rechte gegenüber dem Verantwortlichen zu:
                 </p>
-                <ul>
+                <ul className={styling.lists}>
                     <li>
                         Sie haben ein <b>Recht auf Auskunft</b> über die zu Ihrer Person gespeicherten personenbezogenen Daten, über die Zwecke der Verarbeitung, über eventuelle 
                         Übermittlungen an andere Stellen und über die Dauer der Speicherung.
@@ -182,7 +185,7 @@ export default function PrivacyPolicyLayout(props: {language: LanguageType}) {
                     Bei Fragen zu Ihren Rechten und zur Wahrnehmung Ihrer Rechtewenden Sie sich bitte an die Geschäftsleitung oder den Datenschutzbeauftragten.
                 </p>
 
-                <h2>Ihr Recht auf Beschwerde bei einer Aufsichtsbehörde</h2>
+                <h2 className={styling.headers}>Ihr Recht auf Beschwerde bei einer Aufsichtsbehörde</h2>
                 <p className="mb-3">
                     Als betroffene Person haben Sie unbeschadet eines anderweitigen verwaltungsrechtlichen oder gerichtlichen Rechtsbehelfs das Recht auf Beschwerde bei einer 
                     Aufsichtsbehörde für Datenschutz, insbesondere in dem Mitgliedstaat ihres Aufenthaltsorts oder des Orts des mutmaßlichen Verstoßes, wenn Sie der Ansicht sind, 
@@ -194,10 +197,10 @@ export default function PrivacyPolicyLayout(props: {language: LanguageType}) {
                 </p>
                 <p className="mb-6">
                     Mehr Informationen finden Sie auf der Internetseite des Bundesbeauftragten für den Datenschutz und die Informationsfreiheit. Folgen Sie 
-                    dem <a href="https://www.bfdi.bund.de/DE/Service/Kontakt/Beschwerdeformular/Info_OnlineBeschwerde.html" target="_blank" rel="noopener noreferrer">Link</a>.
+                    dem <a className={styling.links} href="https://www.bfdi.bund.de/DE/Service/Kontakt/Beschwerdeformular/Info_OnlineBeschwerde.html" target="_blank" rel="noopener noreferrer">Link</a>.
                 </p>
 
-                <h2>Datenverarbeitung außerhalb der Europäischen Union</h2>
+                <h2 className={styling.headers}>Datenverarbeitung außerhalb der Europäischen Union</h2>
                 <p className="mb-3">Soweit personenbezogene Daten außerhalb der europäischen Union verarbeitet werden, können Sie dies den vorherigen Ausführungen entnehmen.</p>
                 <p className="mb-3">
                     Als Grundlage der Datenverarbeitung bei Empfängern mit Sitz in Drittstaaten (außerhalb der Europäischen Union, Island, Liechtenstein, Norwegen, also 
@@ -209,10 +212,10 @@ export default function PrivacyPolicyLayout(props: {language: LanguageType}) {
                     werden. Durch diese Klauseln verpflichten sich die Diensteanbieter, bei der Verarbeitung Ihrer relevanten Daten, das europäische Datenschutzniveau einzuhalten, 
                     selbst wenn die Daten in den USA gespeichert, verarbeitet und verwaltet werden. Diese Klauseln basieren auf einem Durchführungsbeschluss der EU-Kommission. 
                     Sie finden den Beschluss und die entsprechenden Standardvertragsklauseln 
-                    u.a. hier: <a href="https://eurlex.europa.eu/eli/dec_impl/2021/914/oj?locale=de" target="_blank" rel="noopener noreferrer">https://eurlex.europa.eu/eli/dec_impl/2021/914/oj?locale=de</a>.
+                    u.a. hier: <a className={styling.links} href="https://eurlex.europa.eu/eli/dec_impl/2021/914/oj?locale=de" target="_blank" rel="noopener noreferrer">https://eurlex.europa.eu/eli/dec_impl/2021/914/oj?locale=de</a>.
                 </p>
 
-                <h2>Sicherheit</h2>
+                <h2 className={styling.headers}>Sicherheit</h2>
                 <p className="mb-3">
                     Wir setzen technische und organisatorische Sicherheitsmaßnahmen gemäß Art. 32 DSGVO ein, um Ihre durch uns verwalteten Daten gegen zufällige oder 
                     vorsätzliche Manipulationen, Verlust, Zerstörung oder vor dem Zugriff unberechtigter Personen zu schützen. Unsere Sicherheitsmaßnahmen werden entsprechend 
@@ -225,25 +228,25 @@ export default function PrivacyPolicyLayout(props: {language: LanguageType}) {
                     der „https://“ Adresszeile Ihres Browsers und am Schloss-Symbol in der Browserzeile.
                 </p>
 
-                <h2>Änderungen der Datenschutzhinweise</h2>
+                <h2 className={styling.headers}>Änderungen der Datenschutzhinweise</h2>
                 <p className="mb-6">
                     Wir überarbeiten diese Datenschutzhinweise bei Änderungen an dieser Internetseite oder bei sonstigen Anlässen, die dies erforderlich machen. 
                     Die jeweils aktuelle Fassung finden Sie stets auf dieser Internetseite.  
                 </p>
 
-                <h2>Wie werden meine Daten im Einzelnen bei Nutzung des Online-Stores verarbeitet?</h2>
+                <h2 className={styling.headers}>Wie werden meine Daten im Einzelnen bei Nutzung des Online-Stores verarbeitet?</h2>
                 <p className="mb-6">
                     Nachfolgend informieren wir Sie über die einzelnen Verarbeitungsvorgänge, den Umfang und den Zweck der Datenverarbeitung, die Rechtsgrundlage, 
                     die Pflicht zur Bereitstellung Ihrer Daten und die jeweilige Speicherdauer. Eine automatisierte Entscheidung im Einzelfall, einschließlich Profiling 
                     findet nicht statt.
                 </p>
 
-                <h2>Bereitstellung der Webseite</h2>
+                <h2 className={styling.headers}>Bereitstellung der Webseite</h2>
                 <p className="mb-6">
                     Bei Aufruf und Nutzung unserer Webseite erheben wir die personenbezogenen Daten, die Ihr Browser automatisch an unseren Server übermittelt. Die folgenden 
                     Informationen werden temporär in einem sog. Logfile gespeichert: 
                 </p>
-                <ul>
+                <ul className={styling.lists}>
                     <li>IP-Adresse des anfragenden Endgerätes</li>
                     <li>Datum und Uhrzeit des Zugriffs</li>
                     <li>Name und URL der abgerufenen Datei</li>
@@ -267,7 +270,7 @@ export default function PrivacyPolicyLayout(props: {language: LanguageType}) {
                     Die vorgenannten Daten werden für die Dauer der Anzeige der Webseite sowie aus technischen Gründen darüber hinaus für maximal 7 Tage gespeichert.
                 </p>
 
-                <h2>Newsletter</h2>
+                <h2 className={styling.headers}>Newsletter</h2>
                 <p className="mb-3">
                     Sofern Sie sich auf unserer Webseite zum Empfang unseres Newsletters anmelden, erheben wir Ihre E-Mail-Adresse sowie Ihren Namen und speichern diese 
                     Informationen zusammen mit dem Datum der Anmeldung und Ihrer IP-Adresse. Im Anschluss erhalten Sie eine E-Mail, in der Sie die Anmeldung zum 
@@ -293,7 +296,7 @@ export default function PrivacyPolicyLayout(props: {language: LanguageType}) {
                     wir Ihre Daten bis zum Widerruf Ihrer Einwilligung (Abmeldung vom Newsletter).
                 </p>
 
-                <h2>Registrierung eines Kundenkontos</h2>
+                <h2 className={styling.headers}>Registrierung eines Kundenkontos</h2>
                 <p className="mb-3">
                     Im Rahmen der Bestellabwicklung erheben wir Ihre personenbezogenen Daten zur Registrierung eines Kundenkontos. Sie können dabei wählen, ob Sie 
                     als Gast bestellen oder ein dauerhaftes Benutzerkonto registrieren möchten. Die Informationen, die während der Registrierung über die Pflichtfelder 
@@ -328,7 +331,7 @@ export default function PrivacyPolicyLayout(props: {language: LanguageType}) {
                     Steuer- und Handelsrecht) bestehen. 
                 </p>
 
-                <h2>Zahlungsdienstleister</h2>
+                <h2 className={styling.headers}>Zahlungsdienstleister</h2>
                 <p><b>Stripe</b></p>
                 <p className="mb-3">
                     Wir verwenden auf unserer Website ein Zahlungstool des amerikanischen Online-Bezahldienstes Stripe für die EC-Zahlung. Für Kunden innerhalb von der 
@@ -365,7 +368,7 @@ export default function PrivacyPolicyLayout(props: {language: LanguageType}) {
                     dürfen also nicht einfach übertragen, dort gespeichert und verarbeitet werden, sofern es keine passenden Garantien (wie etwa EU- Standardvertragsklauseln) 
                     zwischen uns und dem außereuropäischen Dienstleister gibt. Sie haben immer das Recht auf Auskunft, Berichtigung und Löschung Ihrer personenbezogenen 
                     Daten. Bei Fragen können Sie auch jederzeit das Stripe-Team 
-                    über <a href="https://support.stripe.com/contact/login?redirected=true" target="_blank" rel="noopener noreferrer">https://support.stripe.com/contact/email</a> kontaktieren.
+                    über <a className={styling.links} href="https://support.stripe.com/contact/login?redirected=true" target="_blank" rel="noopener noreferrer">https://support.stripe.com/contact/email</a> kontaktieren.
                 </p>
                 <p><b>Zweck und Rechtsgrundlage</b></p>
                 <p className="mb-3">Wir bieten zur Abwicklung von vertraglichen bzw. rechtlichen Beziehungen (Art. 6 Abs. 1 lit. b DSGVO) den Zahlungsdienstleister Stripe an.</p>
@@ -385,11 +388,11 @@ export default function PrivacyPolicyLayout(props: {language: LanguageType}) {
                     Sie verwenden, funktioniert dies auf unterschiedliche Art und Weise.
                 </p>
                 <p className="mb-3">
-                    Weitere Hinweise finden Sie in der <a href="https://stripe.com/de/privacy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a> für Stripe.
+                    Weitere Hinweise finden Sie in der <a className={styling.links} href="https://stripe.com/de/privacy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a> für Stripe.
                 </p>
                 <p>
                     Mehr Informationen zu den Standardvertragsklauseln und über die Daten, die durch die Verwendung von Stripe verarbeitet werden, erfahren Sie in der 
-                    Privacy Policy auf <a href="https://stripe.com/at/privacy" target="_blank" rel="noopener noreferrer">https://stripe.com/at/privacy</a>.
+                    Privacy Policy auf <a className={styling.links} href="https://stripe.com/at/privacy" target="_blank" rel="noopener noreferrer">https://stripe.com/at/privacy</a>.
                 </p>
             </div>
         </PageWrapper>

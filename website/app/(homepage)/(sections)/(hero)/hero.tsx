@@ -46,7 +46,6 @@ export default function Hero(props: {language: LanguageType}) {
         onDemand: {
             language: language,
             imgSrc: pizzaImage,
-            imgAlt: "Image1",
             header: localization.hero.servicePreviews.onDemand.header[language],
             text: localization.hero.servicePreviews.onDemand.text[language],
             button: {
@@ -57,7 +56,6 @@ export default function Hero(props: {language: LanguageType}) {
         scheduled: {
             language: language,
             imgSrc: foodDelivery,
-            imgAlt: "Image1",
             header: localization.hero.servicePreviews.scheduled.header[language],
             text: localization.hero.servicePreviews.scheduled.text[language], 
             button: {

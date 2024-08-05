@@ -15,9 +15,8 @@ const config: Config = {
       'jost-black': ['Jost-Black', 'sans-serif'],
     },
     screens: {
-      'mobile': '0px',
       'tablet': '480px',
-      
+      'min-600px': '600px',
       'min-650px': '650px',
       'min-700px': '700px',
       'min-750px': '750px',
@@ -31,6 +30,9 @@ const config: Config = {
       'navMin-1125px': '1125px',
 
       'ultrawide': '1400px',
+    },
+    listStyleType: {
+      'square': 'square',
     },
     extend: {},
   },

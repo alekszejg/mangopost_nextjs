@@ -24,7 +24,7 @@ export default function ScheduledDeliveryLayout(props: {language: LanguageType})
     const { language } = props;
 
     const styling = {
-        pageWrapper: {
+        pageBody: {
             en: "min-750px:mx-20 ultrawide:mx-0", 
             de:"min-800px:mx-20 ultrawide:mx-0"
         },
@@ -49,25 +49,25 @@ export default function ScheduledDeliveryLayout(props: {language: LanguageType})
                 header: localization.shared.stages.join.header[language],
                 text: localization.shared.stages.join.text[language],
                 imgSrc: joinStep1,
-                imgAlt: "create account icon", 
+                imgAlt: language === "en" ? "Step 1: JOIN" : "Schritt 1: MITGLIED WERDEN"  
             },
             {
                 header: localization.shared.stages.browse.header[language],
                 text: localization.shared.stages.browse.text[language],
                 imgSrc: browseStep2,
-                imgAlt: "browse food image", 
+                imgAlt: language === "en" ? "Step 2: BROWSE" : "Schritt 2: WÄHLEN"
             },
             {
                 header: localization.shared.stages.order.header[language],
                 text: localization.shared.stages.order.text[language],
                 imgSrc: orderStep3,
-                imgAlt: "order food image",
+                imgAlt: language === "en" ? "Step 3: ORDER" : "Schritt 3: BESTELLEN" 
             },
             {
                 header: localization.shared.stages.enjoy.header[language],
                 text: localization.shared.stages.enjoy.text[language],
                 imgSrc: enjoyStep4,
-                imgAlt: "enjoy the food image" 
+                imgAlt: language === "en" ? "Step 4: ENJOY" : "Schritt 4: GENIEßEN" 
             }
         ]
     };
@@ -120,7 +120,6 @@ export default function ScheduledDeliveryLayout(props: {language: LanguageType})
                 textOrder: "min-700px:order-2",
                 imgStyling: "w-[203px] min-700px:w-[253px] min-700px:order-1",
                 imgSrc: favouriteFood,
-                imgAlt: "food plate icon",
                 header: localization.shared.features.favouriteFood.header[language],
                 text: localization.shared.features.favouriteFood.text[language]
             },
@@ -128,7 +127,6 @@ export default function ScheduledDeliveryLayout(props: {language: LanguageType})
                 textOrder: "min-700px:order-1",
                 imgStyling: "w-[187px] min-700px:w-[237px] min-700px:order-2",
                 imgSrc: foodDriver,
-                imgAlt: "food delivery icon",
                 header: localization.shared.features.drivers.header[language],
                 text: localization.shared.features.drivers.text[language]
             },
@@ -136,7 +134,6 @@ export default function ScheduledDeliveryLayout(props: {language: LanguageType})
                 textOrder: "min-700px:order-2",
                 imgStyling: "w-[149px] min-700px:w-[200px] min-700px:order-1",
                 imgSrc: customerSupport,
-                imgAlt: "customer support icon",
                 header: localization.shared.features.customerSupport.header[language],
                 text: localization.shared.features.customerSupport.text[language]
             }
@@ -144,7 +141,7 @@ export default function ScheduledDeliveryLayout(props: {language: LanguageType})
     };
 
     return (
-        <PageWrapper language={language} margins={styling.pageWrapper[language]}>
+        <PageWrapper language={language} margins={styling.pageBody[language]}>
             
             <Section styling={`${styling.stagesSection.general} ${styling.stagesSection[language]}`}>
                 <ServiceStages {...serviceStageProps} />

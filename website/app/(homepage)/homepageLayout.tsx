@@ -11,7 +11,7 @@ import allRoutes from "@/Localization/routes.json";
 
 
 import officeLunch from "@/public/Images/officeLunch.jpg";
-import onDemandApp from "@/public/Images/onDemandApp.jpg";
+import phoneApp from "@/public/Images/phoneApp.jpg";
 
 
 export default function HomepageLayout(props: {language: LanguageType}) {
@@ -31,7 +31,7 @@ export default function HomepageLayout(props: {language: LanguageType}) {
         },
         serviceCardsSection: "flex flex-col gap-y-14 pt-7 pb-20",
         servicesHeader: "text-center font-jost-extrabold tracking-wide text-xl",
-        servicesDescription: "text-center text-base"
+        servicesDescription: "text-center w-4/5 mx-auto text-base min-900px:w-[600px]"
     };
     
     const serviceCardProps = {
@@ -54,7 +54,6 @@ export default function HomepageLayout(props: {language: LanguageType}) {
                 }
             ],
             imgSrc: officeLunch,
-            imgAlt: "an image with multiple employees",
         },
         scheduled: {
             language: language,
@@ -74,8 +73,7 @@ export default function HomepageLayout(props: {language: LanguageType}) {
                     text: localization.serviceCards.scheduled.buttons.learnMore[language]
                 }
             ],
-            imgSrc: onDemandApp,
-            imgAlt: "an image with multiple employees"
+            imgSrc: phoneApp,
         }
     }
 
