@@ -16,7 +16,7 @@ export default function NotFound() {
     pageBody: "h-[100vh]",
     mainContainer: "flex flex-col items-center w-3/4 mx-auto relative top-[7vh] min-650px:top-[20vh]",
     imgContainer: "w-[200px] mb-8 min-650px:w-[300px]",
-    buttonGroup: "flex flex-col items-start gap-y-2 min-650px:flex-row min-650px:buttonClamp",
+    buttonGroup: "flex flex-col items-start gap-y-2 min-650px:flex-row min-650px:gap-y-0 min-650px:gap-x-button-clamp",
     button: "font-jost-bold text-xl tracking-wide linkHover hover:scale-110"
   };
 

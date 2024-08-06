@@ -22,7 +22,7 @@ export default function HomepageLayout(props: {language: LanguageType}) {
         pageWrapper: {
             general: "max-w-[calc(1400px-10rem)] ultrawide:mx-auto", 
             en: "min-750px:mx-20", 
-            de: "min-750px:mx-20"
+            de: "min-800px:mx-20"
         },
         heroSection: {
             general: "flex flex-col items-center py-7 ultrawide:gap-x-10",

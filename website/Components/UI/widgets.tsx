@@ -20,7 +20,7 @@ export function WhatsappWidget(props : {language: LanguageType}) {
     const { language } = props;
     
     const styling = {
-        imgWrapper: "w-14 fixed bottom-[130px] right-3 hover:scale-110 tablet:hidden"
+        imgWrapper: "w-12 fixed bottom-[110px] right-3 hover:scale-110 tablet:hidden"
     };
 
     const predefinedMessage = {

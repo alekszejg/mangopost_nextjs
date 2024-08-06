@@ -23,8 +23,8 @@ export default function ServiceCard(props: ServiceCardProps) {
     const styling = {
         wrapper: {
             general: "flex flex-col py-12 shadow-[0_2px_8px_-3px] shadow-black rounded-3xl",
-            en: "min-800px:flex-row min-800px:justify-center min-800px:items-center min-800px:imgTextGap min-800px:py-28",
-            de: "desktop:flex-row desktop:justify-center desktop:items-center desktop:imgTextGap desktop:py-28"
+            en: "min-800px:flex-row min-800px:justify-center min-800px:items-center min-800px:gap-x-img-text-gap min-800px:py-28",
+            de: "desktop:flex-row desktop:justify-center desktop:items-center desktop:gap-x-img-text-gap desktop:py-28"
         },
         imgContainer: {
             general: "aspect-[5/4] tablet:self-center tablet:w-[350px] min-800px:w-[280px]",

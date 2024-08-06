@@ -22,19 +22,20 @@ const config: Config = {
       'min-750px': '750px',
       'min-800px': '800px',
       'min-900px': '900px',
-
       'navMin-960px': '960px',
-
       'desktop': '992px',
-
       'navMin-1125px': '1125px',
-
       'ultrawide': '1400px',
     },
     listStyleType: {
       'square': 'square',
     },
-    extend: {},
+    extend: {
+      spacing: {
+        'img-text-gap': 'clamp(1rem, 4vw, 6rem)',
+        'button-clamp': 'clamp(1rem, 6vw, 4rem)',
+      },
+    },
   },
   plugins: [],
 };

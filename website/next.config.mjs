@@ -8,6 +8,14 @@ const nextConfig = {
                 source: '/(.*)',
                 headers: [
                     {
+                        key: 'Strict-Transport-Security',
+                        value: 'max-age=31536000; preload',
+                    },
+                    {
+                        key: 'X-XSS-Protection',
+                        value: '1; mode=block'
+                    },
+                    {
                         key: 'X-Frame-Options', 
                         value: 'DENY',
                     },

@@ -51,16 +51,7 @@
   }
 }
 
-/* SETTING CLAMPS (unavailable without extra plugins) */
-@layer components {
-  .imgTextGap {
-    column-gap: clamp(1rem, 4vw, 6rem);
-  }
 
-  .buttonClamp {
-    column-gap: clamp(1rem, 6vw, 4rem);
-  }
-}
 
 
 
