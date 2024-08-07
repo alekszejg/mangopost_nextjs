@@ -2,16 +2,16 @@ import { NextRequest, NextResponse } from "next/server";
 
 // FOR FINDING <html> lang value
 export const allRoutes: { [key: string]: string } = {
-    "/": "de",
+    "/de": "de",
     "/en": "en",
-    "/ueber-uns": "de",
-    "/about-us": "en",
-    "/auf-anruf-lieferung": "de",
-    "/on-demand-delivery": "en",
-    "/geplante-lieferung": "de",
-    "/scheduled-delivery": "en",
-    "/privacy-policy": "en",
-    "/datenschutz": "de"
+    "/about/de": "de",
+    "/about/en": "en",
+    "/catering/de": "de",
+    "/catering/en": "en",
+    "/cafe/de": "de",
+    "/cafe/en": "en",
+    "/privacy/de": "de",
+    "/privacy/en": "en"
 };
 
 export function middleware(req: NextRequest) {

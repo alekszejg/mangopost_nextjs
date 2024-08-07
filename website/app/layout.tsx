@@ -8,7 +8,7 @@ import "@/index.css";
 // COMMON CUSTOM TYPES
 export type LanguageType = "en" | "de";
 export type LocalizedValues = {[key in LanguageType]: string};
-export type ServiceType = "onDemand" | "scheduled";
+export type ServiceType = "catering" | "cafe";
 
 
 export const metadata: Metadata = {

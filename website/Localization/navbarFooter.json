@@ -1,30 +1,22 @@
 {
     "navbar": {
-        "titles": {
-            "aboutUs": {
-                "en": "ABOUT US",
-                "de": "ÜBER UNS"
-            },
-            "orderNow": {
-                "en": "ORDER NOW",
-                "de": "JETZT BESTELLEN"
-            },
-            "dropdown": {
-                "onDemand": {
-                    "en": "ON-DEMAND DELIVERY",
-                    "de": "AUF ANRUF LIEFERUNG"
-                },
-                "scheduled": {
-                    "en": "SCHEDULED DELIVERY",
-                    "de": "GEPLANTE LIEFERUNG"
-                }
-            }
+        "about": {
+            "en": "ABOUT US",
+            "de": "ÜBER UNS"
+        },
+        "orderNow": {
+            "en": "ORDER NOW",
+            "de": "JETZT BESTELLEN"
+        },
+        "dropdown": {
+            "catering": "MANGOPOST CATERING",
+            "cafe": "MANGOPOST CAFE"
         }
     },
 
 
     "footer": {
-        "urlBlocks": {
+        "urlGroups": {
             "orderWays": {
                 "header": {
                     "en": "WAYS TO ORDER",
@@ -33,22 +25,22 @@
                 "urls": [
                     {
                         "name": {
-                            "en": "On-Demand Delivery",
-                            "de": "Auf Anruf Lieferung"
+                            "en": "Mangopost Catering",
+                            "de": "Mangopost Catering"
                         },
                         "route": {
-                            "en": "/on-demand-delivery",
-                            "de": "/auf-anruf-lieferung"
+                            "en": "/catering/en",
+                            "de": "/catering/de"
                         }
                     },
                     {
                         "name": {
-                            "en": "Scheduled Delivery",
-                            "de": "Geplante Lieferung"
+                            "en": "Mangopost Cafe",
+                            "de": "Mangopost Cafe"
                         },
                         "route": {
-                            "en": "/scheduled-delivery",
-                            "de": "/geplante-lieferung"
+                            "en": "/cafe/en",
+                            "de": "/cafe/de"
                         }
                     }   
                 ]
@@ -65,8 +57,8 @@
                             "de": "Über Uns"
                         },
                         "route": {
-                            "en": "/about-us",
-                            "de": "/ueber-uns"
+                            "en": "/about/en",
+                            "de": "/about/de"
                         }
                     },
                     {
@@ -75,8 +67,8 @@
                             "de": "Datenschutz"
                         },
                         "route": {
-                            "en": "/privacy-policy",
-                            "de": "/datenschutz"
+                            "en": "/privacy/en",
+                            "de": "/privacy/de"
                         }
                     }
                 ]

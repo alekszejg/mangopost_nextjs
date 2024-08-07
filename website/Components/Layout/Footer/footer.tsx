@@ -1,12 +1,10 @@
-import Link from "next/link";
-import { LanguageType, LocalizedValues } from "@/app/layout";
-import localization from "@/Localization/navbarFooter.json";
 import Container from "../section";
+import URLGroup, {} from "./urlGroup";
+
+import { LanguageType } from "@/app/layout";
+import localization from "@/Localization/navbarFooter.json";
 
 
-// Types related URL localization 
-type URL = {name: LocalizedValues; route: LocalizedValues};
-interface URLGroup {header: LocalizedValues; urls: URL[];}
 
 
 export default function Footer(props: {language: LanguageType}) {
@@ -29,16 +27,16 @@ export default function Footer(props: {language: LanguageType}) {
     };
 
     
-    const urlGroupProps = {
+    const urlGroupsProps = {
         orderWays: {
             language: language,
-            urlGroup: localization.footer.urlBlocks["orderWays"] as URLGroup,
-            header: localization.footer.urlBlocks.orderWays.header[language]
+            urlGroup: localization.footer.urlGroups["orderWays"],
+            header: localization.footer.urlGroups.orderWays.header[language]
         },
         company: {
             language: language,
-            urlGroup: localization.footer.urlBlocks["company"] as URLGroup,
-            header: localization.footer.urlBlocks.company.header[language]
+            urlGroup: localization.footer.urlGroups["company"],
+            header: localization.footer.urlGroups.company.header[language]
         }
     };
     
@@ -47,8 +45,8 @@ export default function Footer(props: {language: LanguageType}) {
         <footer className={styling.wrappers.footer}>
             
             <Container styling={`${styling.wrappers.links.general} ${styling.wrappers.links[language]}`}>
-                <URLGroup {...urlGroupProps.orderWays} />
-                <URLGroup {...urlGroupProps.company} />
+                <URLGroup {...urlGroupsProps.orderWays} />
+                <URLGroup {...urlGroupsProps.company} />
             </Container>
 
             <Container styling={styling.wrappers.extraInfo}>
@@ -61,30 +59,6 @@ export default function Footer(props: {language: LanguageType}) {
 }
 
 
-function URLGroup(props: {language: LanguageType, urlGroup: URLGroup, header: string}) {
-    const { language, urlGroup, header } = props;
-    
-    const styling = {
-        wrapper: "text-center",
-        header: "mb-1 text-lg font-jost-medium tracking-wide",
-        link: "block w-full h-full hover:underline"
-    };
 
-    return (
-        <Container styling={styling.wrapper}>
-            <h2 className={styling.header}>{header}</h2>
-            <ul>
-                {urlGroup.urls.map((url, index) => (
-                    <li key={index} className={index !== 0 ? "mt-1.5" : undefined}>
-                        <Link className={styling.link} href={url.route[language]}>
-                            {url.name[language]}
-                        </Link>
-                    </li>
-                ))}
-            </ul>
-
-        </Container>
-    );
-}
 
 

@@ -1,22 +1,22 @@
 {
     "homepage": {
         "en": "/en",
-        "de": "/"
+        "de": "/de"
     },
-    "aboutUs": {
-        "en": "/about-us",
-        "de": "/ueber-uns"
+    "about": {
+        "en": "/about/en",
+        "de": "/about/de"
     },
-    "onDemandDelivery": {
-        "en": "/on-demand-delivery",
-        "de": "/auf-anruf-lieferung"
+    "catering": {
+        "en": "/catering/en",
+        "de": "/catering/de"
     },
-    "scheduledDelivery": {
-        "en": "/scheduled-delivery",
-        "de": "/geplante-lieferung"
+    "cafe": {
+        "en": "/cafe/en",
+        "de": "/cafe/de"
     },
-    "privacyPolicy": {
-        "en": "/privacy-policy",
-        "de": "/datenschutz"
+    "privacy": {
+        "en": "/privacy/en",
+        "de": "/privacy/de"
     }
 }

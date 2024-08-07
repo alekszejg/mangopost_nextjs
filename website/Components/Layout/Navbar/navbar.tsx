@@ -23,10 +23,10 @@ import allRoutes from "@/Localization/routes.json";
 
 interface allRoutesTypes {
     homepage: LocalizedValues;
-    aboutUs: LocalizedValues;
-    onDemandDelivery: LocalizedValues;
-    scheduledDelivery: LocalizedValues;
-    privacyPolicy: LocalizedValues;
+    about: LocalizedValues;
+    catering: string;
+    cafe: string;
+    privacy: LocalizedValues;
 }
 
 
@@ -145,13 +145,13 @@ export default function Navbar(props: {language: LanguageType;}) {
 
     const servicesDropdownProps = {
         dropdownStatus: isDropdownVisible,
-        onDemand: {
-            title: localization.navbar.titles.dropdown.onDemand[language],
-            route: allRoutes.onDemandDelivery[language],
+        catering: {
+            title: localization.navbar.dropdown.catering,
+            route: allRoutes.catering[language],
         },
-        scheduled: {
-            title: localization.navbar.titles.dropdown.scheduled[language],
-            route: allRoutes.scheduledDelivery[language]
+        cafe: {
+            title: localization.navbar.dropdown.cafe,
+            route: allRoutes.cafe[language]
         }
     };
 
@@ -170,15 +170,15 @@ export default function Navbar(props: {language: LanguageType;}) {
 
                         <ul className={styling.navList.list}>
                             <li className={styling.navList.items.aboutUs}>
-                                <Link className={styling.navList.links.aboutUs} href={allRoutes.aboutUs[clientLanguage]}>
-                                    {localization.navbar.titles.aboutUs[clientLanguage]}
+                                <Link className={styling.navList.links.aboutUs} href={allRoutes.about[clientLanguage]}>
+                                    {localization.navbar.about[clientLanguage]}
                                 </Link>
                             </li>
 
                             <li className={styling.navList.items.orderNow}>
                                 
                                 <span className={styling.navList.links.orderNow} onMouseEnter={toggleDropdown} onClick={toggleDropdown}>
-                                    {localization.navbar.titles.orderNow[clientLanguage]}
+                                    {localization.navbar.orderNow[clientLanguage]}
                                     <Image className={isDropdownVisible ? `rotate-[-180deg] ${styling.navList.arrowDownIcon}` : styling.navList.arrowDownIcon} src={blackArrowDownIcon} alt="" />
                                 </span>
                                 

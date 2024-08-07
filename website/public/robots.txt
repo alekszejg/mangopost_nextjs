@@ -1,4 +1,4 @@
 User-Agent: *
-Disallow: /privacy-policy
-Disallow: /datenschutz
+Disallow: /privacy/en
+Disallow: /privacy/de
 Sitemap: https://mangopost.app/sitemap.xml

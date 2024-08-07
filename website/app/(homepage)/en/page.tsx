@@ -9,7 +9,7 @@ export const metadata: Metadata = {
         canonical: "https://mangopost.app/en",
         languages: {
             'en-US': 'https://mangopost.app/en',
-            'de-DE': 'https://mangopost.app/',
+            'de-DE': 'https://mangopost.app/de',
           },
     },
     openGraph: {
@@ -25,5 +25,5 @@ export const metadata: Metadata = {
 };
 
 export default function HomepageEnglish() {
-    return <HomepageLayout language="en"/>
+    return <HomepageLayout language="en" />
 }

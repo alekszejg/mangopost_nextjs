@@ -7,11 +7,8 @@
         },
 
         "servicePreviews": {
-            "onDemand": {
-                "header": {
-                    "en": "ON-DEMAND DELIVERY",
-                    "de": "AUF ANRUF LIEFERUNG"
-                },
+            "catering": {
+                "header": "MANGOPOST CATERING",
                 "text": {
                     "en": "Order food for yourself or together with your colleagues",
                     "de": "Bestellen Sie Mahlzeiten für sich selbst oder gemeinsam mit Ihren Kollegen."
@@ -22,11 +19,8 @@
                 }
             },
 
-            "scheduled": {
-                "header": {
-                    "en": "SCHEDULED DELIVERY",
-                    "de": "GEPLANTE LIEFERUNG"
-                },
+            "cafe": {
+                "header": "MANGOPOST CAFE",
                 "text": {
                     "en": "View scheduled daily meals for your company",
                     "de": "Sehen Sie sich die geplanten täglichen Mahlzeiten für Ihr Unternehmen an."
@@ -51,11 +45,8 @@
             "de": "Ob Sie spontane Lieferungen für Mittagessen oder Veranstaltungen am Arbeitsplatz wählen oder regelmäßige Lieferungen bevorzugen, Mangopost hat alles, was Sie brauchen."
         },
 
-        "onDemand": {
-            "header": {
-                "en": "ON-DEMAND DELIVERIES",
-                "de": "AUF ANRUF LIEFERUNGEN"
-            },
+        "catering": {
+            "header": "MANGOPOST CATERING",
             "text": {
                 "en": "Spontaneous group deliveries for lunch and events",
                 "de": "Spontane Gruppenlieferungen für Mittagessen und Veranstaltungen"
@@ -82,11 +73,8 @@
             }
         },
 
-        "scheduled": {
-            "header": {
-                "en": "SCHEDULED DELIVERIES",
-                "de": "GEPLANTEN LIEFERUNGEN"
-            },
+        "cafe": {
+            "header": "MANGOPOST CAFE",
             "text": {
                 "en": "Regular planned food deliveries",
                 "de": "Regelmäßige Essenslieferungen für Ihr Unternehmen"
