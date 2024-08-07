@@ -119,17 +119,38 @@
             }
         }      
     }, 
-    
 
+    "buttons": {
+        "orderNow": {
+            "en": "ORDER NOW",
+            "de": "JETZT BESTELLEN"
+        },
+        "signup": {
+            "en": "SIGN UP / LOGIN",
+            "de": "REGISTRIEREN / ANMELDEN"
+        },
+        "learnMore": {
+            "catering": {
+                "en": "ABOUT MANGOPOST CATERING",
+                "de": "ÜBER MANGOPOST CATERING"
+            },
+            "cafe": {
+                "en": "ABOUT MANGOPOST CAFE",
+                "de": "ÜBER MANGOPOST CAFE"
+            }
+        }
+    },
+
+    
     "catering": {
         "headers": {
             "howItWorks": {
                 "en": "HOW DOES MANGOPOST CATERING WORK?",
                 "de": "WIE FUNKTIONIERT MANGOPOST CATERING?"
             },
-            "comparison": {
-                "en": "COMPARING MANGOPOST CATERING WITH MANGOPOST CAFE",
-                "de": "VERGLEICH VON MANGOPOST CATERING MIT MANGOPOST CAFE"
+            "suitable": {
+                "en": "IS IT SUITABLE FOR YOU?",
+                "de": "PASST ES FÜR SIE?"
             },
             "features": {
                 "en": "WHY CHOOSE MANGOPOST CATERING?",
@@ -141,16 +162,6 @@
                 "en": "Ordering meals can get difficult, especially for a large team of hungry people. Mangopost Catering will take care of such problem by providing you with local restaurants to order from, professional and efficient drivers to deliver your orders, as well as offer helpful customer support with your orders.",
                 "de": "Das Bestellen von Mahlzeiten kann schwierig werden, insbesondere für ein großes Team hungriger Menschen. Mangopost Catering wird dieses Problem lösen, indem es Ihnen lokale Restaurants zur Auswahl stellt, professionelle und effiziente Fahrer, die Ihre Bestellungen liefern, sowie einen hilfreichen Kundensupport für Ihre Bestellungen bietet."
             }
-        },
-        "buttons": {
-            "orderNow": {
-                "en": "ORDER NOW",
-                "de": "JETZT BESTELLEN"
-            },
-            "learnMore": {
-                "en": "LEARN MORE",
-                "de": "MEHR ERFAHREN"
-            }
         }
     },
 
@@ -161,9 +172,9 @@
                 "en": "HOW DOES MANGOPOST CAFE WORK?",
                 "de": "WIE FUNKTIONIERT MANGOPOST CAFE?"
             },
-            "comparison": {
-                "en": "COMPARING MANGOPOST CAFE WITH MANGOPOST CATERING",
-                "de": "VERGLEICH VON MANGOPOST CAFE MIT MANGOPOST CATERING"
+            "suitable": {
+                "en": "IS IT SUITABLE FOR YOU?",
+                "de": "PASST ES FÜR SIE?"
             },
             "features": {
                 "en": "WHY CHOOSE MANGOPOST CAFE?",
@@ -174,16 +185,6 @@
             "features": {
                 "en": "Having your meal choices and delivery time planned beforehand saves lots of time and stress for you and your colleagues when it comes decided he food and the place from which you want to order, as well as try and find time to take a break and enjoy the food. Mangopost Cafe is here to solve all these issues.",
                 "de": "Wenn Sie Ihre Essensauswahl und die Lieferzeit im Voraus planen, sparen Sie und Ihre Kollegen viel Zeit und Stress bei der Entscheidung über das Essen und den Ort, von dem Sie bestellen möchten. Außerdem finden Sie so leichter Zeit, eine Pause zu machen und das Essen zu genießen. Mangopost Cafe ist da, um all diese Probleme zu lösen."
-            }
-        },
-        "buttons": {
-            "signup": {
-                "en": "SIGN UP",
-                "de": "REGISTRIEREN"
-            },
-            "login": {
-                "en": "SIGN IN",
-                "de": "ANMELDEN"
             }
         }
     }

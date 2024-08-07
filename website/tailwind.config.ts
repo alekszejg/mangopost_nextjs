@@ -14,6 +14,11 @@ const config: Config = {
       'jost-extrabold': ['Jost-Extra-Bold', 'sans-serif'],
       'jost-black': ['Jost-Black', 'sans-serif'],
     },
+    fontSize: {
+      'servicesMainHeader': 'clamp(1.125rem, 3.5vw, 1.5rem)', 
+      'serviceSummmaryHeader': 'clamp(1rem, 3vw, 1.25rem)',
+      'serviceSummaryText': 'clamp(1rem, 3vw, 1.25rem)',
+    },
     screens: {
       'tablet': '480px',
       'min-600px': '600px',
@@ -34,6 +39,7 @@ const config: Config = {
       spacing: {
         'img-text-gap': 'clamp(1rem, 4vw, 6rem)',
         'button-clamp': 'clamp(1rem, 6vw, 4rem)',
+        'serviceSummary': 'clamp(2rem, 10%, 3rem)',
       },
     },
   },

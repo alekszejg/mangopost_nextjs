@@ -1,21 +1,21 @@
-import OnDemandDeliveryLayout from "../cateringLayout";
+import CateringLayout from "../cateringLayout";
 import React from "react";
 
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-    title: "On-demand Delivery - Mangopost",
+    title: "Catering - Mangopost",
     description: "Whether you find yourself unexpectedly hungry during a business meeting or are planning an upcoming event, treat yourself and your colleagues by ordering food delivery straight to your workplace.",
     alternates: {
-        canonical: "https://mangopost.app/on-demand-delivery",
+        canonical: "https://mangopost.app/catering/en",
         languages: {
-            'en-US': 'https://nextjs.org/on-demand-delivery',
-            'de-DE': 'https://mangopost.app/auf-anruf-lieferung',
+            'en-US': 'https://mangopost.app/catering/en',
+            'de-DE': 'https://mangopost.app/catering/de',
           },
     },
     openGraph: {
-        title: "On-demand Delivery - Mangopost",
+        title: "Catering - Mangopost",
         description: "Whether you find yourself unexpectedly hungry during a business meeting or are planning an upcoming event, treat yourself and your colleagues by ordering food delivery straight to your workplace.",
-        url: "https://mangopost.app/on-demand-delivery",
+        url: "https://mangopost.app/catering/en",
         images: [
             {
                 url: "https://mangopost.app/whatsappImgMeta.png"
@@ -24,6 +24,6 @@ export const metadata: Metadata = {
     }
 };
 
-export default function onDemandDeliveryEnglish(){
-    return <OnDemandDeliveryLayout language="en" />
+export default function CateringEnglish(){
+    return <CateringLayout language="en" />
 }

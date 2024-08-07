@@ -4,15 +4,15 @@
     <!-- Homepage -->
     <url>
         <loc>https://mangopost.app/en</loc>  
-        <lastmod>2024-07-19</lastmod>           
-        <changefreq>yearly</changefreq>          
+        <lastmod>2024-08-07</lastmod>           
+        <changefreq>monthly</changefreq>          
         <priority>1.0</priority>                 
     </url>
 
     <url>
         <loc>https://mangopost.app/de</loc>  
-        <lastmod>2024-07-19</lastmod>           
-        <changefreq>yearly</changefreq>          
+        <lastmod>2024-08-07</lastmod>           
+        <changefreq>monthly</changefreq>          
         <priority>1.0</priority>                 
     </url>
 
@@ -20,15 +20,15 @@
     <!-- About -->
     <url>
         <loc>https://mangopost.app/about/en</loc>  
-        <lastmod>2024-07-19</lastmod>           
-        <changefreq>yearly</changefreq>          
+        <lastmod>2024-08-07</lastmod>           
+        <changefreq>monthly</changefreq>          
         <priority>0.4</priority>                 
     </url>
 
     <url>
         <loc>https://mangopost.app/about/de</loc>  
-        <lastmod>2024-07-19</lastmod>           
-        <changefreq>yearly</changefreq>          
+        <lastmod>2024-08-07</lastmod>           
+        <changefreq>monthly</changefreq>          
         <priority>0.4</priority>                 
     </url>
 
@@ -36,15 +36,15 @@
     <!-- Services: Catering -->
     <url>
         <loc>https://mangopost.app/catering/en</loc>  
-        <lastmod>2024-07-19</lastmod>           
-        <changefreq>yearly</changefreq>          
+        <lastmod>2024-08-07</lastmod>           
+        <changefreq>monthly</changefreq>          
         <priority>0.9</priority>                 
     </url>
 
     <url>
         <loc>https://mangopost.app/catering/de</loc>  
-        <lastmod>2024-07-19</lastmod>           
-        <changefreq>yearly</changefreq>          
+        <lastmod>2024-08-07</lastmod>           
+        <changefreq>monthly</changefreq>          
         <priority>0.9</priority>                 
     </url>
 
@@ -52,15 +52,15 @@
     <!-- Services: Cafe -->
     <url>
         <loc>https://mangopost.app/cafe/en</loc>  
-        <lastmod>2024-07-19</lastmod>           
-        <changefreq>yearly</changefreq>          
+        <lastmod>2024-08-07</lastmod>           
+        <changefreq>monthly</changefreq>          
         <priority>0.9</priority>                 
     </url>
 
     <url>
         <loc>https://mangopost.app/cafe/de</loc>  
-        <lastmod>2024-07-19</lastmod>           
-        <changefreq>yearly</changefreq>          
+        <lastmod>2024-08-07</lastmod>           
+        <changefreq>monthly</changefreq>          
         <priority>0.9</priority>                 
     </url>
 

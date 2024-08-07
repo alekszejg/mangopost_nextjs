@@ -1,7 +1,7 @@
 import PageWrapper from '@/Components/Layout/fullPage'; 
 import Section from '@/Components/Layout/section';
 import ServiceStages from "@/app/(services)/(orderStages)/serviceStages";
-import CompareServices from "@/app/(services)/(comparison)/compareServices";
+import IsServiceSuitable from "@/app/(services)/(isServiceSuitable)/isServiceSuitable";
 import ServiceFeatures from "@/app/(services)/(features)/serviceFeatures";
 
 import localization from "@/Localization/services.json";
@@ -33,7 +33,11 @@ export default function ScheduledDeliveryLayout(props: {language: LanguageType})
             en: "min-750px:py-12",
             de: "min-800px:py-12"
         },
-        comparisonSection: "py-7 min-800px:py-12",
+        isServiceSuitableSection: {
+            general: "flex flex-col items-center my-7 tablet:mx-[5vw]",
+            en: "min-750px:mx-0 min-750px:my-12",
+            de: "min-800px:mx-0 min-800px:my-12"
+        },
         featuresSection: {
             general: "flex flex-col items-center pb-16 mx-6",
             en: "max-w-[750px] min-750px:mx-auto",
@@ -72,28 +76,10 @@ export default function ScheduledDeliveryLayout(props: {language: LanguageType})
         ]
     };
     
-    const compareServicesProps = {
-        header: localization.cafe.headers.comparison[language],
-        catering: {
-            service: "catering" as ServiceType,
-            header: localization.comparison.catering.header,
-            text: localization.comparison.catering.text[language],
-            features: localization.comparison.catering.features[language],
-            buttons: [
-                {
-                    category: "general" as ButtonCategory,
-                    url: "https://shop.mangopost.app/menu",
-                    text: localization.catering.buttons.orderNow[language]
-                },
-                {
-                    category: "learnMore" as ButtonCategory,
-                    url: allRoutes.catering[language],
-                    text: localization.catering.buttons.learnMore[language] 
-                }
-            ]
-        },
-        cafe: {
-            service: "cafe" as ServiceType,
+    const isServiceSuitableProps = {
+        header: localization.cafe.headers.suitable[language],
+        service: {
+            serviceType: "cafe" as ServiceType,
             header: localization.comparison.cafe.header,
             text: localization.comparison.cafe.text[language],
             features: localization.comparison.cafe.features[language],
@@ -101,12 +87,12 @@ export default function ScheduledDeliveryLayout(props: {language: LanguageType})
                 {
                     category: "general" as ButtonCategory,
                     url: "https://shop.mangopost.app/customerdata/registration",
-                    text: localization.cafe.buttons.signup[language]
+                    text: localization.buttons.signup[language]
                 },
                 {
-                    category: "general" as ButtonCategory,
-                    url: "https://shop.mangopost.app/menu",
-                    text: localization.cafe.buttons.login[language]
+                    category: "learnMore" as ButtonCategory,
+                    url: allRoutes.catering[language],
+                    text: localization.buttons.learnMore.catering[language]
                 }
             ]
         } 
@@ -147,8 +133,8 @@ export default function ScheduledDeliveryLayout(props: {language: LanguageType})
                 <ServiceStages {...serviceStageProps} />
             </Section>
 
-            <Section styling={styling.comparisonSection}>
-                <CompareServices {...compareServicesProps} />
+            <Section styling={`${styling.isServiceSuitableSection.general} ${styling.isServiceSuitableSection[language]}`}>
+                <IsServiceSuitable {...isServiceSuitableProps} />
             </Section>
 
             <Section styling={`${styling.featuresSection.general} ${styling.featuresSection[language]}`}>

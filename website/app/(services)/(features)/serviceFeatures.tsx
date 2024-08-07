@@ -14,7 +14,7 @@ export default function ServiceFeatures(props: {header: string; text: string; fe
     const { header, text, features } = props;
 
     const styling = {
-        header: "mb-3 text-center font-jost-extrabold text-lg tablet:text-xl",
+        header: "mb-3 text-center font-jost-extrabold text-lg tablet:text-servicesMainHeader",
         text: "mb-8 text-base tablet:mb-0 tablet:text-center",
         featuresWrapper: "flex flex-col mt-12 gap-y-12",
         featureContainer: "flex flex-col items-center min-700px:flex-row min-700px:justify-center min-700px:gap-x-20"

@@ -32,7 +32,7 @@ export default function NotFound() {
     },
     de: {
       buttonStyling: styling.button,
-      url: "/",
+      url: "/de",
       text: "UNSERE STARTSEITE",
       imgSrc: germanFlagIcon,
       imgAlt: "german flag",

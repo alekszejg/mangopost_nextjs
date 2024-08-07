@@ -1,9 +1,9 @@
-import ScheduledDeliveryLayout from "../cafeLayout";
+import CafeLayout from "../cafeLayout";
 import React from "react";
 
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-    title: "Scheduled Delivery - Mangopost",
+    title: "Cafe - Mangopost",
     description: "Would you like your favorite food delivered reliably and punctually to your workplace? Schedule regular deliveries from trusted places that arrive precisely when you need them.",
     alternates: {
         canonical: "https://mangopost.app/cafe/en",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
           },
     },
     openGraph: {
-        title: "Scheduled Delivery - Mangopost",
+        title: "Cafe - Mangopost",
         description: "Would you like your favorite food delivered reliably and punctually to your workplace? Schedule regular deliveries from trusted places that arrive precisely when you need them.",
         url: "https://mangopost.app/cafe/en",
         images: [
@@ -24,6 +24,6 @@ export const metadata: Metadata = {
     }
 };
 
-export default function ScheduledDeliveryEnglish() {
-    return <ScheduledDeliveryLayout language="en" />
+export default function CafeEnglish() {
+    return <CafeLayout language="en" />
 }

@@ -3,7 +3,7 @@ import React from "react";
 
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-    title: "Über uns - Mangopost Essenlieferung",
+    title: "Über uns - Mangopost",
     description: "Wir beseitigen die Mühen des Essensbestellens an Ihren Arbeitsplatz, sodass Sie sich ganz darauf konzentrieren können, was und wo Sie bestellen möchten. Genießen Sie sowohl spontane als auch geplante Lieferungen direkt in Ihr Büro.",
     alternates: {
         canonical: "https://mangopost.app/about/de",

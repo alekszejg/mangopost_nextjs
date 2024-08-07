@@ -11,7 +11,7 @@ export default function ServiceStages(props: {service: ServiceType; header: stri
     const { service, header, stages } = props;
 
     const styling = { 
-        header: "text-center font-jost-extrabold mb-6 text-lg tablet:text-xl",
+        header: "text-center font-jost-extrabold mb-6 text-lg tablet:text-servicesMainHeader",
         stagesWrapper: {
             general: "flex flex-col gap-y-14 min-800px:flex-row min-800px:justify-between min-800px:gap-y-0",
             catering: "min-800px:gap-x-14",
