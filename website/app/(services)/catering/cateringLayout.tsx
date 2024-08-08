@@ -28,13 +28,13 @@ export default function CateringLayout(props: {language: LanguageType}) {
         },
         stagesSection: {
             general: "flex flex-col items-center py-7 mx-6 min-800px:mx-0",
-            en: "min-750px:py-16",
-            de: "min-800px:py-16" 
+            en: "min-750px:py-12",
+            de: "min-800px:py-12" 
         },
         isServiceSuitableSection: {
             general: "flex flex-col items-center my-7 tablet:mx-[5vw]",
-            en: "min-750px:mx-0 min-750px:my-12",
-            de: "min-800px:mx-0 min-800px:my-12"
+            en: "min-750px:mx-0 min-750px:mt-4 min-750px:mb-12",
+            de: "min-800px:mx-0 min-800px:mt-4 min-800px:mb-12"
         },
         featuresSection: {
             general: "flex flex-col items-center pb-16 mx-6",
@@ -78,7 +78,7 @@ export default function CateringLayout(props: {language: LanguageType}) {
             buttons: [
                 {
                     category: "general" as ButtonCategory,
-                    url: allRoutes.catering[language],
+                    url: "https://shop.mangopost.app/menu",
                     text: localization.buttons.orderNow[language] 
                 },
                 {

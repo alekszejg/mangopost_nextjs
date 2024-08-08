@@ -7,7 +7,7 @@ export default function ServiceSummary(props: ServiceSummaryProps) {
     const { header, text, features, buttons } = props;
 
     const styling = {
-        header: "mb-0.5 font-jost-bold text-center text-base tablet:text-serviceSummmaryHeader",
+        header: "mb-1.5 font-jost-bold text-center text-base tablet:text-serviceSummmaryHeader",
         text: "text-serviceSummaryText font-jost-medium-italic px-8 tablet:pl-serviceSummary",
         featureList: "px-8 pt-6 pb-10 text-serviceSummaryText tablet:pl-serviceSummary",
         buttonGroup: "flex flex-col items-center gap-y-2 mt-auto",
