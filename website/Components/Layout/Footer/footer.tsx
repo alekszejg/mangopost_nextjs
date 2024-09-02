@@ -21,7 +21,7 @@ export default function Footer(props: {language: LanguageType}) {
             extraInfo: "pb-8 text-center tracking-wide" 
         },
         text: {
-            phone: "text-lg font-jost-medium",
+            phone: "text-lg font-jost-medium hover:text-[#0000EE] underline decoration-solid underline-offset-4 hover:text-[#0000EE]",
             rights: "text-base"
         }
     };
@@ -50,7 +50,7 @@ export default function Footer(props: {language: LanguageType}) {
             </Container>
 
             <Container styling={styling.wrappers.extraInfo}>
-                <p className={styling.text.phone}>{localization.footer.extras.phone[language]}</p>
+                <a className={styling.text.phone} href="tel:+498945203680">{localization.footer.extras.phone[language]}</a>
                 <p className={styling.text.rights}>{localization.footer.extras.rights[language]}</p>
             </Container>
 

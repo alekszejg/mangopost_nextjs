@@ -21,7 +21,8 @@ export default function AboutUsLayout(props: {language: LanguageType;}) {
         },
         text: {
             about: "text-base tablet:text-lg",
-            contact: "text-center text-lg tablet:text-xl"
+            contact: "text-center text-lg tablet:text-xl",
+            mailLink: "underline decoration-solid underline-offset-2 text-[#0000EE]"
         },
     };
 
@@ -36,7 +37,10 @@ export default function AboutUsLayout(props: {language: LanguageType;}) {
 
             <Section styling={styling.wrappers.contact}>
                 <h1 className={styling.headers.contact}>{localization.contact.header[language]}</h1>
-                <p className={styling.text.contact}>{localization.contact.text[language]}</p>
+                <p className={styling.text.contact}>
+                    {localization.contact.text[language]}
+                    <a className={styling.text.mailLink} href="mailto:service@mangopost.app">service@mangopost.app</a>
+                </p>
             </Section>
 
         </PageWrapper>
